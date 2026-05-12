@@ -1,0 +1,67 @@
+Prozess:
+- Git auf Windows installiert
+- Github Account erstellt prodhighres
+
+Perfekt. Dann ist dein Grundsetup jetzt korrekt eingerichtet:
+
+Visual Studio Code
+Git
+Node.js
+npm
+Git Bash
+Terminal Workflow
+
+Damit bist du bereit für moderne Frontend-Entwicklung.
+
+Lernen ___________________________________________________________
+
+Vite - build tool
+-> braucht Node.js
+
+Vercel deploy tool
+
+Angeschaut ___________________________________________________________
+
+Node.js - ist ein Programm das es erlaubt JavaScript direkt auf dem Computer lokal anstatt im Browser auszuführen.
+-> wird gebraucht, weil viele Tools wie Vite, React etc auf JavaScript basieren
+
+npm - ist der Node Package Manager von Node.js. Damit installiert man Libraries wie react oder supabase
+- eine library ist eine Sammlung von code, der importiert werden kann. React zum Beispiel ermöglicht grosse Änderungen am Aussehen mit wenig Javascript code zu schreiben und baut dann den echten "übersetzten" javascript code.
+- es wird auch gebraucht um einen entwicklungsserver zu starten also einen local host zu erstellen
+
+Git - ist ein Programm, das Versionen des Codes in Branches speichert. Anstatt Versionen immer wieder neu manuell abzuspeichern, kann ein Branch eine Abweichung vom originalcode commited werden, der entweder integriert oder abgelehnt werden kann.
+-> braucht MinTTY als UI Ersatz für die Windows Powershell Console. Bessere Font, Copy paste etc.
+-> braucht GitBash als Konsole
+
+GitHub 
+- ist die Cloudschnittstelle zu Git, es macht das selbe wie Git, ermöglicht aber das Arbeiten mit anderen Menschen, oder mit mehreren Geräten per Internet. Ausserdem werden hier Dinge deployed, das bedeutet an d
+
+- Repository: Dies ist das Projekt
+- Branches: Abweichungen vom Originalcode
+- Commits: so werden Abweichungen in den Originalcode integriert
+
+Git Commands:
+
+- git --version (zeigt die aktuelle Version an)
+
+- git init
+- git status
+- git add .
+- git commit
+- git push
+
+git add .
+git commit -m "..."
+git push
+
+VS Code
+↓
+Git
+↓
+GitHub
+↓
+Vercel
+↓
+Live Website
+
+Integriert ___________________________________________________________
