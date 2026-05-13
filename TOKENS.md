@@ -23,7 +23,7 @@
 
 ---
 
-## Colors
+## Fonts
 - `--font-family-base`
 
 ---
