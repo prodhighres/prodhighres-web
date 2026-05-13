@@ -27,6 +27,12 @@
   --color-text: var(--color-neutral-1000);
   --color-filter: var(--color-brand-primary);
 
+  /* =========================
+     FONTS
+  ========================= */
+
+  --font-family-base: 'Inter', sans-serif;
+
 
   /* =========================
      SPACING

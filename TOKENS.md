@@ -23,6 +23,11 @@
 
 ---
 
+## Colors
+- `--font-family-base`
+
+---
+
 ## Spacing
 - `--space-1`
 - `--space-2`
