@@ -1,6 +1,8 @@
 # Highres Web
 
 ## Setup
+
+### Programmierumgebung
 * Git eingerichtet
 * GitHub verbunden
 * Node.js installiert
@@ -12,7 +14,7 @@
 * reset.css erstellt
 * globals.css aufgebaut
 
-#### Globals.css
+#### globals.css
 
 * Color System definiert
 * Spacing System definiert
