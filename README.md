@@ -1,19 +1,39 @@
 # Highres Web
 
 ## Setup
-- Git eingerichtet
-- GitHub verbunden
-- Node.js installiert
-- VS Code eingerichtet
-- Multi-device workflow aktiv
+* Git eingerichtet
+* GitHub verbunden
+* Node.js installiert
+* VS Code eingerichtet
+* Multi-device workflow aktiv
 
+### CSS Foundation
+
+* reset.css erstellt
+* globals.css aufgebaut
+
+#### Globals.css
+
+* Color System definiert
+* Spacing System definiert
+* Radius System definiert
+* Transition System definiert
+* Shadow System definiert
+* Z-Index System definiert
+* Border System definiert
+* CSS Naming-System standardisiert
+    
 ## Nächster Schritt
-- CSS Design System aufbauen
-- Ordnerstruktur erweitern
-- Responsive Layout Basis
+
+* Typography System
+* Container & Grid System
+* Buttons & Cards
+* Responsive Layout Basis
 
 ## Später geplant
-- Vite
-- React
-- Supabase
-- Deployment
+
+* Vite
+* React
+* Supabase
+* Deployment
+* Dark/Light Theme System
