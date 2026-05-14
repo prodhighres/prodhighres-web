@@ -23,9 +23,10 @@
   --color-brand-secondary: #ff0000;
 
   /* Semantic */
-  --color-background: var(--color-neutral-0);
+  --color-background: var(--color-neutral-100);
   --color-text: var(--color-neutral-1000);
   --color-filter: var(--color-brand-primary);
+  --color-card-bg: var(--color-neutral-0);
 
   /* =========================
      FONTS
