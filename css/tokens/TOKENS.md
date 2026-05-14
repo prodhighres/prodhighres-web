@@ -25,6 +25,18 @@
 
 ## Fonts
 - `--font-family-base`
+- `--fw-regular`
+- `--fw-medium`
+- `--fw-semibold`
+- `--fs-xs`
+- `--fs-sm`
+- `--fs-lg`
+- `--fs-xl`
+- `--fs-2xl`
+- `--fs-3xl`
+- `--lh-thight`
+- `--lh-normal`
+- `--lh-relaxed`
 
 ---
 
@@ -69,12 +81,12 @@
 ---
 
 ## Ready-to-use Transitions
-- `--transition-fast`
-- `--transition-medium`
-- `--transition-slow`
-- `--transition-bounce`
-- `--transition-elastic`
-- `--transition-snappy`
+- `--motion-hover`
+- `--motion-focus`
+- `--motion-modal`
+- `--motion-drawer`
+- `--motion-bounce`
+- `--motion-elastic`
 
 ---
 

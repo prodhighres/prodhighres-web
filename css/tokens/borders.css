@@ -1,0 +1,9 @@
+/* =========================
+     BORDERS
+  ========================= */
+  
+:root {
+    /* Scale */
+    --border-width-sm: 1px;
+    --border-width-md: 2px;
+}

@@ -1,0 +1,39 @@
+/* =========================
+     TYPOGRAPHY
+  ========================= */
+
+:root {
+    /* =================================
+        FONT FAMILIES
+    ================================= */
+
+    --font-family-base: 'Inter', sans-serif;
+
+    /* =================================
+        FONT SIZES
+    ================================= */
+
+    --fs-xs: clamp(0.75rem, 0.72rem + 0.1vw, 0.8rem);
+    --fs-sm: clamp(0.875rem, 0.84rem + 0.15vw, 0.95rem);
+    --fs-md: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+    --fs-lg: clamp(1.125rem, 1.05rem + 0.3vw, 1.35rem);
+    --fs-xl: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
+    --fs-2xl: clamp(2rem, 1.7rem + 1.5vw, 3rem);
+    --fs-3xl: clamp(3rem, 2.5rem + 2vw, 4.5rem);
+
+    /* =================================
+        FONT WEIGHTS
+    ================================= */
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+
+    /* =================================
+        LINE HEIGHTS
+    ================================= */
+
+    --lh-tight: 1.1;
+    --lh-normal: 1.5;
+    --lh-relaxed: 1.7;
+}

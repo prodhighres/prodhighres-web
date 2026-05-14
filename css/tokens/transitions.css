@@ -1,0 +1,54 @@
+/* =========================
+   TRANSITIONS
+========================= */
+
+:root {
+
+    /* =================================
+        DURATION SCALE
+    ================================= */
+
+    --duration-fast: 150ms;
+    --duration-medium: 300ms;
+    --duration-slow: 500ms;
+
+    /* =================================
+        EASING SCALE
+    ================================= */
+
+    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
+    --ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
+
+    --ease-snappy: cubic-bezier(0.75, -0.5, 0.25, 1.5);
+    --ease-bounce: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    --ease-elastic: cubic-bezier(0.8, -1, 0.2, 2);
+
+    /* =================================
+        SEMANTIC MOTION TOKENS
+    ================================= */
+
+    --motion-hover:
+        all var(--duration-fast)
+        var(--ease-standard);
+
+    --motion-focus:
+        all var(--duration-fast)
+        var(--ease-decelerate);
+
+    --motion-modal:
+        all var(--duration-medium)
+        var(--ease-standard);
+
+    --motion-drawer:
+        all var(--duration-medium)
+        var(--ease-decelerate);
+
+    --motion-bounce:
+        all var(--duration-medium)
+        var(--ease-bounce);
+
+    --motion-elastic:
+        all var(--duration-slow)
+        var(--ease-elastic);
+}

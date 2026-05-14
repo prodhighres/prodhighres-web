@@ -1,0 +1,24 @@
+/* =========================
+     COLORS
+  ========================= */
+
+:root {
+    /* Palette */
+    --color-neutral-0: #ffffff;
+    --color-neutral-100: #f2f2f2;
+    --color-neutral-200: #dddddd;
+    --color-neutral-400: #bcbcbc;
+    --color-neutral-700: #393939;
+    --color-neutral-800: #272727;
+    --color-neutral-900: #1a1818;
+    --color-neutral-1000: #000000;
+
+    --color-brand-blue: #2a2d74;
+    --color-brand-red: #ff0000;
+
+    /* Semantic */
+    --color-background: var(--color-neutral-100);
+    --color-text: var(--color-neutral-1000);
+    --color-filter: var(--color-brand-red);
+    --color-card-bg: var(--color-neutral-0);
+}
