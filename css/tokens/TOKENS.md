@@ -34,7 +34,7 @@
 - `--fs-xl`
 - `--fs-2xl`
 - `--fs-3xl`
-- `--lh-thight`
+- `--lh-tight`
 - `--lh-normal`
 - `--lh-relaxed`
 

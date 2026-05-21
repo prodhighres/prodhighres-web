@@ -4,10 +4,10 @@
 
 :root {
     /* Scale */
-    --bp-xs: 480px;
-    --bp-sm: 640px;
-    --bp-md: 768px;
-    --bp-lg: 1024px;
-    --bp-xl: 1280px;
-    --bp-2xl: 1536px;
+    /* --bp-xs: 480px; */ /* Mobile small */
+    --bp-sm: 640px; /* Mobile large */
+    --bp-md: 768px; /* Tablet */
+    --bp-lg: 1024px; /* Laptop */
+    --bp-xl: 1280px; /* Desktop */
+    /* --bp-2xl: 1536px; */ /* Large desktop */
 }
