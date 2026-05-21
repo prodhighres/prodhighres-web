@@ -2,9 +2,9 @@
 
 ## Vision / Globales Ziel
 
-* Highres Web wird die zentrale digitale Plattform für die Brand Highres Production.
+Highres Web wird die zentrale digitale Plattform für die Brand Highres Production.
 
-* Das Ziel ist ein modernes, modular aufgebautes Webprojekt, das langfristig erweiterbar bleibt und vollständig alleine entwickelt und verwaltet werden kann.
+-> Das Ziel ist ein modernes, modular aufgebautes Webprojekt, das langfristig erweiterbar bleibt und vollständig alleine entwickelt und verwaltet werden kann.
 
 ## Die Plattform soll:
 
