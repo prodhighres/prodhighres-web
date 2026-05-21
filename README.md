@@ -6,7 +6,7 @@ Highres Web wird die zentrale digitale Plattform für die Brand Highres Producti
 
 -> Das Ziel ist ein modernes, modular aufgebautes Webprojekt, das langfristig erweiterbar bleibt und vollständig alleine entwickelt und verwaltet werden kann.
 
-## Die Plattform soll:
+Die Plattform soll:
 
 * als kreatives Portfolio funktionieren
 * Musik / Medien / Projekte präsentieren
