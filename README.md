@@ -148,16 +148,3 @@ Highres Web wird die zentrale digitale Plattform für die Brand Highres Producti
 * Domain Setup
 * Performance Optimization
 * SEO Basics (Meta, OpenGraph)
-
-## Status
-
-### Abgeschlossen
-* Setup
-* Design Tokens (Foundation Layer)
-
-### In Arbeit
-* Layout Tokens
-* Layout CSS Layer
-
-### Nächster Schritt
-* Container & Grid System implementieren
