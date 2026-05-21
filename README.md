@@ -1,5 +1,285 @@
 # Highres Web
 
+⸻
+
+## Vision / Globales Ziel
+
+* Highres Web wird die zentrale digitale Plattform für die Brand Highres Production.
+
+* Das Ziel ist ein modernes, modular aufgebautes Webprojekt, das langfristig erweiterbar bleibt und vollständig alleine entwickelt und verwaltet werden kann.
+
+⸻
+
+## Die Plattform soll:
+
+* als kreatives Portfolio funktionieren
+* Musik / Medien / Projekte präsentieren
+* einen Webshop integrieren
+* ein kleines CMS für dynamische Inhalte und Datei-Uploads besitzen
+* performant, responsive und professionell deploybar sein
+* ohne hohe laufende Kosten umsetzbar bleiben
+* als echtes Lernprojekt dienen, ohne unnötig komplex zu werden
+
+⸻
+
+## Roadmap einfach
+
+1. Setup
+2. Design Tokens
+3. Layout Tokens
+4. Layout System
+5. Base Layer
+6. Responsive Testseite
+7. Components
+8. Vite
+9. React
+10. CMS / Supabase
+11. Shop
+12. Deployment
+13. Optimierung
+
+⸻
+
+# Prozess
+
+## Phase 1 - Basis
+
+* Ein sauberes CSS- und Layout-System aufbauen.
+
+### Stack
+
+* HTML
+* CSS
+* Git + GitHub
+* Vite (später)
+
+### Fokus
+
+* Design Tokens
+* Layout System
+* Responsive Architektur
+* Component Thinking vorbereiten
+
+⸻
+
+## Phase 2 — Komponenten-System
+
+* Wiederverwendbare UI-Komponenten entwickeln.
+
+### Komponenten
+
+* Navbar
+* Hero
+* Buttons
+* Cards
+* Forms
+* Sections
+* Media Components
+
+### Fokus:
+
+* Konsistenz
+* Skalierbarkeit
+* saubere Architektur
+* spätere React-Migration erleichtern
+
+⸻
+
+## Phase 3 — React Migration
+
+* Die statische Struktur in ein komponentenbasiertes Frontend überführen.
+
+### Stack
+
+* React
+* Vite
+* CSS System weiterverwenden
+
+### Fokus
+
+* Component-based Architecture
+* Reusable UI
+* bessere Wartbarkeit
+* dynamische Inhalte vorbereiten
+
+⸻
+
+## Phase 4 — CMS & Dynamic Content
+
+* Inhalte dynamisch verwalten können.
+
+### Geplante Features:
+
+* Datei-Uploads
+* Projekte ergänzen
+* Beats / Medien verwalten
+* Portfolio erweitern
+* eventuell Blog / Updates
+
+### Mögliche Lösungen:
+
+* Supabase￼
+* Firebase￼
+* Sanity￼
+* JSON-basierte lokale Datenstruktur (einfachste Variante)
+
+### Empfohlene Richtung - Supabase:
+
+* kostenlose Einstiegsebene
+* Auth + Datenbank + Storage kombiniert
+* gut mit React kompatibel
+* alleine umsetzbar
+* skalierbar ohne eigenes Backend
+
+⸻
+
+## Phase 5 — Deployment & Production
+
+* Professionelles Deployment mit einfacher Wartung.
+
+### Stack
+
+* GitHub Repository
+* Vercel Deployment
+* eigene Domain
+
+### Zielzustand
+
+* Push auf GitHub → automatische Live-Updates
+* responsive Production Website
+* Portfolio + Shop + CMS verbunden
+
+⸻
+
+# Entwicklungsphilosophie
+
+Prioritäten
+
+1. Skalierbarkeit vor Geschwindigkeit
+
+Lieber ein sauberes Fundament als schnelle improvisierte Lösungen.
+
+⸻
+
+2. Komponenten statt Einzelseiten
+
+Alles möglichst wiederverwendbar denken:
+
+* Layouts
+* Sections
+* Cards
+* Navigation
+* States
+* Utilities
+
+⸻
+
+3. Mobile-First
+
+Responsive Verhalten wird nicht später ergänzt, sondern direkt mitgedacht.
+
+⸻
+
+4. Lernbar & alleine wartbar
+
+Keine unnötig komplizierten Enterprise-Lösungen.
+
+Das System soll:
+
+* verständlich bleiben
+* dokumentierbar sein
+* alleine wartbar bleiben
+* später erweiterbar sein
+
+⸻
+
+5. Möglichst geringe Kosten
+
+Bevorzugt:
+
+* kostenlose Tools
+* Open-Source Lösungen
+* Hosting mit Free Tier
+* einfache Infrastruktur
+
+⸻
+
+Wo du aktuell stehst
+
+Bereits sehr gut aufgebaut
+
+Du bist aktuell exakt an dem Punkt angekommen, an dem professionelle Frontend-Systeme normalerweise beginnen:
+
+Du hast bereits:
+
+* Setup abgeschlossen
+* Git Workflow eingerichtet
+* Design Tokens aufgebaut
+* Foundation Layer definiert
+* Architektur begonnen
+* Skalierbarkeit mitgedacht
+
+Das ist bereits deutlich strukturierter als viele kleine Projekte.
+
+⸻
+
+Der tatsächliche nächste Schritt
+
+Jetzt NICHT:
+
+* React
+* CMS
+* Backend
+* Shop
+* komplexe Komponenten
+
+⸻
+
+Jetzt JA:
+
+1. Layout Tokens finalisieren
+
+Noch definieren:
+
+* Container Widths
+* Breakpoints
+* Grid Columns
+* Layout Gaps
+
+⸻
+
+2. Layout CSS Layer bauen
+
+Danach:
+
+* container.css
+* grid.css
+* section.css
+* stack.css
+
+Das wird dein eigentliches Layout-System.
+
+⸻
+
+3. Erste echte responsive Seite bauen
+
+Noch ohne React.
+
+Ziel:
+
+* Hero
+* Navbar
+* Sections
+* Cards
+* Responsive Layout
+* saubere CSS Architektur
+
+⸻
+
+
+
+
+
 ## Setup
 
 ### Programmierumgebung
