@@ -1,14 +1,10 @@
 # Highres Web
 
-⸻
-
 ## Vision / Globales Ziel
 
 * Highres Web wird die zentrale digitale Plattform für die Brand Highres Production.
 
 * Das Ziel ist ein modernes, modular aufgebautes Webprojekt, das langfristig erweiterbar bleibt und vollständig alleine entwickelt und verwaltet werden kann.
-
-⸻
 
 ## Die Plattform soll:
 
@@ -19,8 +15,6 @@
 * performant, responsive und professionell deploybar sein
 * ohne hohe laufende Kosten umsetzbar bleiben
 * als echtes Lernprojekt dienen, ohne unnötig komplex zu werden
-
-⸻
 
 ## Roadmap einfach
 
@@ -37,8 +31,6 @@
 11. Shop
 12. Deployment
 13. Optimierung
-
-⸻
 
 # Prozess
 
@@ -59,8 +51,6 @@
 * Layout System
 * Responsive Architektur
 * Component Thinking vorbereiten
-
-⸻
 
 ## Phase 2 — Komponenten-System
 
@@ -83,8 +73,6 @@
 * saubere Architektur
 * spätere React-Migration erleichtern
 
-⸻
-
 ## Phase 3 — React Migration
 
 * Die statische Struktur in ein komponentenbasiertes Frontend überführen.
@@ -101,8 +89,6 @@
 * Reusable UI
 * bessere Wartbarkeit
 * dynamische Inhalte vorbereiten
-
-⸻
 
 ## Phase 4 — CMS & Dynamic Content
 
@@ -131,8 +117,6 @@
 * alleine umsetzbar
 * skalierbar ohne eigenes Backend
 
-⸻
-
 ## Phase 5 — Deployment & Production
 
 * Professionelles Deployment mit einfacher Wartung.
@@ -149,8 +133,6 @@
 * responsive Production Website
 * Portfolio + Shop + CMS verbunden
 
-⸻
-
 # Entwicklungsphilosophie
 
 Prioritäten
@@ -158,8 +140,6 @@ Prioritäten
 1. Skalierbarkeit vor Geschwindigkeit
 
 Lieber ein sauberes Fundament als schnelle improvisierte Lösungen.
-
-⸻
 
 2. Komponenten statt Einzelseiten
 
@@ -172,13 +152,9 @@ Alles möglichst wiederverwendbar denken:
 * States
 * Utilities
 
-⸻
-
 3. Mobile-First
 
 Responsive Verhalten wird nicht später ergänzt, sondern direkt mitgedacht.
-
-⸻
 
 4. Lernbar & alleine wartbar
 
@@ -191,8 +167,6 @@ Das System soll:
 * alleine wartbar bleiben
 * später erweiterbar sein
 
-⸻
-
 5. Möglichst geringe Kosten
 
 Bevorzugt:
@@ -201,8 +175,6 @@ Bevorzugt:
 * Open-Source Lösungen
 * Hosting mit Free Tier
 * einfache Infrastruktur
-
-⸻
 
 Wo du aktuell stehst
 
@@ -221,8 +193,6 @@ Du hast bereits:
 
 Das ist bereits deutlich strukturierter als viele kleine Projekte.
 
-⸻
-
 Der tatsächliche nächste Schritt
 
 Jetzt NICHT:
@@ -232,8 +202,6 @@ Jetzt NICHT:
 * Backend
 * Shop
 * komplexe Komponenten
-
-⸻
 
 Jetzt JA:
 
@@ -246,8 +214,6 @@ Noch definieren:
 * Grid Columns
 * Layout Gaps
 
-⸻
-
 2. Layout CSS Layer bauen
 
 Danach:
@@ -258,8 +224,6 @@ Danach:
 * stack.css
 
 Das wird dein eigentliches Layout-System.
-
-⸻
 
 3. Erste echte responsive Seite bauen
 
@@ -273,8 +237,6 @@ Ziel:
 * Cards
 * Responsive Layout
 * saubere CSS Architektur
-
-⸻
 
 
 
