@@ -1,47 +1,36 @@
 # Progress
 
-## Setup
-
+## Setup (done)
 * Git eingerichtet
 * GitHub verbunden
 * Node.js installiert
 * VS Code eingerichtet
 * Multi-device workflow aktiv
 
-## CSS Foundation
+## CSS Tokens (done)
 
-1. reset.css erstellt
-2. tokens aufgebaut
+### Design Tokens (done)
+* Color
+* Spacing
+* Radius
+* Transition
+* Typografie
+* Shadows
+* Z-Index
+* Border
 
-### Tokens
+### Layout Tokens (done)
+* breakpoints
+* container
+* grid
 
-#### Design Tokens (abgeschlossen)
-* Color Tokens definiert
-* Spacing Tokens definiert
-* Radius Tokens definiert
-* Transition Tokens definiert
-* Typografie Tokens definiert
-* Shadow Tokens definiert
-* Z-Index Tokens definiert
-* Border Tokens definiert
-
-## Layout Foundation
-
-### Tokens (in Arbeit / geplant)
-* Container Tokens (max-width + padding)
-* Breakpoint Tokens (responsive breakpoints)
-* Grid Tokens (columns + gap system)
-* Layout Scale Tokens (optional Erweiterung für spacing im Layout-Kontext)
-
-### CSS Layout Layer (geplant)
-* container.css erstellen
-* grid.css erstellen
-* section.css erstellen
-* stack.css erstellen (vertical spacing primitives)
-* cluster.css optional (horizontal alignment patterns)
+## CSS Layout (done)
+* container layout
+* grid layout
+* section layout
+* stack layout
 
 ## Base Layer (geplant)
-
 * global reset finalisieren (modernisiert)
 * base typography defaults (body, headings, links)
 * form base styles vereinheitlichen
@@ -79,7 +68,7 @@
 
 * Mobile-first breakpoints aktiv umgesetzt
 * Grid System responsive gemacht
-* Container Verhalten pro Breakpoint definiert
+* Container Verhalten pro Breakpoint
 * Section spacing responsive standardisiert
 
 ## State & Interaction System (später)

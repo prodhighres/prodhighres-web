@@ -1,0 +1,10 @@
+/* =========================
+     CONTAINER LAYOUT
+   ========================= */
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+  max-width: var(--container-xl);
+}

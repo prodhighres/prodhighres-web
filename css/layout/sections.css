@@ -1,0 +1,25 @@
+/* =========================
+     SECTIONS LAYOUT
+   ========================= */
+
+/* Base section */
+.section {
+  padding-block: var(--space-10);
+}
+
+/* Variants */
+.section-sm {
+  padding-block: var(--space-6);
+}
+
+.section-md {
+  padding-block: var(--space-10);
+}
+
+.section-lg {
+  padding-block: var(--space-14);
+}
+
+.section-xl {
+  padding-block: var(--space-20);
+}
