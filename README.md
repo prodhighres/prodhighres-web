@@ -16,7 +16,7 @@ Highres Web wird die zentrale digitale Plattform für die Brand Highres Producti
 * ohne hohe laufende Kosten umsetzbar bleiben
 * als echtes Lernprojekt dienen, ohne unnötig komplex zu werden
 
-## Roadmap simpel
+## Roadmap
 
 1. Setup
 2. Design Tokens
