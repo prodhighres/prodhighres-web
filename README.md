@@ -61,8 +61,6 @@ The goal is a modern, modular, mobile-first web project that remains scalable lo
 - Z-Index
 - Border
 
----
-
 ### Layout Tokens
 
 - Breakpoints
@@ -91,8 +89,6 @@ The goal is a modern, modular, mobile-first web project that remains scalable lo
 - define content
 - create Page layout/blockout
 - decide for onepager or multiple pages
-
----
 
 ## Figma Components (planned)
 
