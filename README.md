@@ -1,20 +1,22 @@
 # Highres Web
 
-## Vision / Globales Ziel
+## Vision / Global Goal
 
-Highres Web wird die zentrale digitale Plattform für die Brand Highres Production.
+Highres Web is the central digital platform for the Highres Production brand.
 
-* Das Ziel ist ein modernes, modular aufgebautes mobile first Webprojekt, das langfristig erweiterbar bleibt und vollständig alleine entwickelt und verwaltet werden kann, mit möglichst geringen Kosten.
+The goal is a modern, modular, mobile-first web project that remains scalable long-term and can be fully developed and maintained independently with minimal costs.
 
-### Die Plattform soll:
+### The platform should:
 
-* als kreatives Portfolio funktionieren
-* Musik / Medien / Projekte präsentieren
-* einen Webshop integrieren
-* ein kleines CMS für dynamische Inhalte und Datei-Uploads besitzen
-* performant, responsive und professionell deploybar sein
-* ohne hohe laufende Kosten umsetzbar bleiben
-* als echtes Lernprojekt dienen, ohne unnötig komplex zu werden
+- function as a creative portfolio
+- present music / media / projects
+- integrate a webshop
+- include a small CMS for dynamic content and file uploads
+- be performant, responsive, and production-ready
+- stay lightweight in maintenance and cost
+- serve as a structured learning project without unnecessary complexity
+
+---
 
 ## Roadmap
 
@@ -23,128 +25,164 @@ Highres Web wird die zentrale digitale Plattform für die Brand Highres Producti
 3. Layout Tokens
 4. Layout System
 5. Base Layer
-6. Responsive Testseite
+6. Responsive Test Page
 7. Components
 8. Vite
 9. React
 10. CMS / Supabase
 11. Shop
 12. Deployment
-13. Optimierung
+13. Optimization
+
+---
 
 # Progress
 
 ## Setup (done)
-* Git eingerichtet
-* GitHub verbunden
-* Node.js installiert
-* VS Code eingerichtet
-* Multi-device workflow aktiv
+
+- Git configured
+- GitHub connected
+- Node.js installed
+- VS Code configured
+- Multi-device workflow active
+
+---
 
 ## CSS Tokens (done)
 
-### Design Tokens (done)
-* Color
-* Spacing
-* Radius
-* Transition
-* Typografie
-* Shadows
-* Z-Index
-* Border
+### Design Tokens
 
-### Layout Tokens (done)
-* breakpoints
-* container
-* grid
+- Color
+- Spacing
+- Radius
+- Transition
+- Typography
+- Shadows
+- Z-Index
+- Border
 
-## CSS Layout (done)
-* container layout
-* grid layout
-* section layout
-* stack layout
+---
 
-## Base Layer (geplant)
-* global reset finalisieren (modernisiert)
-* base typography defaults (body, headings, links)
-* form base styles vereinheitlichen
-* media defaults (img, svg, video)
-* accessibility defaults (focus states)
+### Layout Tokens
 
-## Components Layer (geplant)
+- Breakpoints
+- Container
+- Grid
+
+---
+
+## Layout System (done)
+
+- Container system
+- Grid system
+- Section system
+- Stack system
+
+---
+
+## Base Layer (planned)
+
+- global reset (modernized)
+- base typography (body, headings, links)
+- form base styles
+- media defaults (img, svg, video)
+- accessibility defaults (focus states)
+
+---
+
+## Components Layer (planned)
 
 ### Core UI Components
-* Button Component System
-* Card Component System
-* Input / Form Components
-* Badge / Tag Components
+
+- Button system
+- Card system
+- Input / form components
+- Badge / tag components
 
 ### Navigation
-* Navbar Component refactor
-* Mobile Navigation System
-* Menu State Handling (open/close/overlay)
+
+- Navbar refactor
+- Mobile navigation system
+- Menu state handling (open/close/overlay)
 
 ### Content Components
-* Hero Component
-* Section Wrapper Component
-* Footer Component
-* Media Card / Content Card Variants
 
-## Utilities Layer (geplant)
+- Hero component
+- Section wrapper component
+- Footer component
+- Media / content card variants
 
-* spacing utilities (optional, falls nötig)
-* typography utilities (font-size helpers ersetzen alte Klassen)
-* display utilities (flex, grid helpers)
-* visibility utilities
-* state utilities (active, hidden, loading)
+---
 
-## Responsive Layout Basis (nächster Schritt nach Layout Tokens)
+## Utilities Layer (planned)
 
-* Mobile-first breakpoints aktiv umgesetzt
-* Grid System responsive gemacht
-* Container Verhalten pro Breakpoint
-* Section spacing responsive standardisiert
+- spacing utilities (optional)
+- typography utilities (replace font-size classes)
+- display utilities (flex, grid helpers)
+- visibility utilities
+- state utilities (active, hidden, loading)
 
-## State & Interaction System (später)
+---
 
-* hover / focus / active states konsistent über Tokens
-* transition system finalisieren (motion tokens + usage rules)
-* loading states standardisieren
-* component state classes vereinheitlichen
+## Responsive System (next step after layout tokens)
 
-## Theme System (später)
+- mobile-first breakpoints implemented
+- grid system responsive
+- container behavior per breakpoint
+- section spacing standardized
 
-* Dark Mode Tokens
-* Light Mode Tokens
-* Theme Switch Mechanismus
-* Semantic Color Layer erweitern (background, surface, text variants)
+---
 
-## Architecture & Tooling (später)
+## State & Interaction System (later)
 
-* Vite Setup
-* Build Pipeline strukturieren
-* CSS bundling / ordering system
-* PostCSS (optional)
-* Linting / formatting rules
+- hover / focus / active states via tokens
+- transition system finalized
+- loading states standardized
+- component state classes unified
 
-## Framework Migration (optional später)
+---
 
-* React Einführung
-* Component-based architecture
-* Design Tokens als shared system
-* Component mapping (CSS → React Components)
+## Theme System (later)
 
-## Backend / Data Layer (später)
+- dark mode tokens
+- light mode tokens
+- theme switch mechanism
+- semantic color layer (background, surface, text)
 
-* Supabase Integration
-* Content Struktur (Beats / Media / Pages)
-* Dynamic Content Rendering
-* Admin / Upload System (optional)
+---
 
-## Deployment (später)
+## Architecture & Tooling (later)
 
-* Production Build Setup
-* Hosting (Vercel / Netlify / Custom)
-* Domain Setup
-* Performance Optimization
-* SEO Basics (Meta, OpenGraph)
+- Vite setup
+- build pipeline structure
+- CSS bundling strategy
+- PostCSS (optional)
+- linting & formatting rules
+
+---
+
+## Framework Migration (optional later)
+
+- React integration
+- component-based architecture
+- design tokens shared system
+- CSS → React component mapping
+
+---
+
+## Backend / Data Layer (later)
+
+- Supabase integration
+- content structure (beats / media / pages)
+- dynamic content rendering
+- admin / upload system
+
+---
+
+## Deployment (later)
+
+- production build setup
+- Vercel / Netlify deployment
+- domain setup
+- performance optimization
+- SEO basics (meta, OpenGraph)
