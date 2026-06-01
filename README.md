@@ -82,7 +82,13 @@ The goal is a modern, modular, mobile-first web project that remains scalable lo
 
 - Tokens integrated
 - Typography styles integrated
-- Viewport setup mobile
+- Viewport setup mobile/laptop
+
+## Figma Nav (done)
+
+- General Nav Links defined
+- Mobile Nav design
+- Dekstop Nav design
 
 ## Figma Blockout (planned)
 
