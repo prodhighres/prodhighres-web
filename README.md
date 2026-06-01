@@ -78,25 +78,27 @@ The goal is a modern, modular, mobile-first web project that remains scalable lo
 
 ---
 
-## Figma Setup (done)
+## Figma
+
+### Setup (done)
 
 - Tokens integrated
 - Typography styles integrated
 - Viewport setup mobile/laptop
 
-## Figma Nav (done)
+###  Nav (done)
 
 - General Nav Links defined
 - Mobile Nav design
 - Dekstop Nav design
 
-## Figma Blockout (planned)
+### Blockout (planned)
 
 - define content
 - create Page layout/blockout
 - decide for onepager or multiple pages
 
-## Figma Components (planned)
+### Components (planned)
 
 - create reusable components
 
