@@ -2,18 +2,18 @@
 const showcaseCards = [
     {
         title: "BORN CRIMINAL",
-        image: "assets/images/showcase/born criminal.jpg",
-        audio: "assets/audio/born criminal - demo LQ.mp3",
-    },
-    {
-        title: "DUSTY",
-        image: "assets/images/showcase/placeholder3.jpg",
-        audio: "assets/audio/born criminal - demo LQ.mp3",
+        image: "assets/images/showcase/Cover - Born criminal - LQ.jpg",
+        audio: "assets/audio/born criminal - full LQ.mp3",
     },
     {
         title: "MONDE TRISTE",
         image: "assets/images/showcase/placeholder2.jpg",
-        audio: "assets/audio/born criminal - demo LQ.mp3",
+        audio: "assets/audio/monde triste - raw LQ.mp3",
+    },
+    {
+        title: "REMORSE",
+        image: "assets/images/showcase/placeholder5.jpg",
+        audio: "assets/audio/remorse - raw LQ.mp3",
     }
 ];
 
