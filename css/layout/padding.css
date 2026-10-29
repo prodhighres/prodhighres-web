@@ -9,3 +9,17 @@
 .padding-lg {
     padding: var(--space-7);
 }
+
+@media (max-width: 600px) {
+    .padding-sm {
+        padding: var(--space-2);
+    }
+
+    .padding-md {
+        padding: var(--space-3);
+    }
+
+    .padding-lg {
+        padding: var(--space-5);
+    } 
+}
