@@ -14,13 +14,13 @@
 }
 
 .beatcard {
-    width: 90vw;
+    width: 100vw;
     max-width: 500px;
     display: flex;
     height: auto;
     position: relative;
     overflow: hidden;
-    margin: var(--space-3);
+    padding: var(--space-3);
 }
 
 .beatcard img {
