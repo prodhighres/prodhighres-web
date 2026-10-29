@@ -4,24 +4,30 @@
     display: flex;
     justify-content: left;
     overflow-x: scroll;
-    gap: var(--space-7);
-    background-color: var(--color-neutral-900);
+    scroll-snap-align: initial;
+    padding-right: var(--space-7);
+    background: linear-gradient(to bottom, var(--color-neutral-900) 0%, black 100%);
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .beatcard {
     width: 100vw;
+    max-width: 500px;
     display: flex;
     height: auto;
     position: relative;
     overflow: hidden;
+    margin-left: var(--space-7);
 }
 
 .beatcard img {
     aspect-ratio: 1;
-    max-height: 500px;
+    height: auto;
     width: 100%;
     object-fit: cover;
-    background-color: var(--color-neutral-900);
 }
 
 .beatcard .title {
@@ -56,7 +62,7 @@
     pointer-events: none;
     position: absolute;
     width: 100%;
-    bottom: -40%;
+    bottom: -15%;
     rotate: 15deg;
     transform: scaleX(2);
     height: 70%;
@@ -66,4 +72,26 @@
     background-color: var(--color-frost-dark);
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 15%, rgba(52,52,52,1) 35%, rgba(229,229,229,0) 100%);
     -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 15%, rgba(52,52,52,1) 35%, rgba(229,229,229,0) 100%);
+}
+
+@media (min-width: 1200px) {
+    .showcase {
+        padding-right: var(--space-8);
+    }
+
+    .beatcard {
+        width: 100vw;
+        max-width: 1000px;
+        margin-left: var(--space-8);
+    }
+
+    .beatcard img {
+        max-height: 500px;
+        padding: var(--space-7);
+    }
+
+
+    .beatcard .frost::before {
+        bottom: -30%;
+    }
 }
