@@ -44,3 +44,13 @@ small,
 .text-small {
   font-size: var(--fs-sm);
 }
+
+a {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+.decorative {
+  font-family: var(--font-family-decorative);
+}

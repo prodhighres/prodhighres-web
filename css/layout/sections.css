@@ -3,7 +3,8 @@
    ========================= */
 
 /* Base section */
-.section {
+section {
+  display: flex;
   padding-block: var(--space-10);
 }
 

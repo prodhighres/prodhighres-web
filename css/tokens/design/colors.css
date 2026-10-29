@@ -16,6 +16,9 @@
     --color-brand-blue: #2a2d74;
     --color-brand-red: #ff0000;
 
+    --color-frost-dark: rgba(0, 0, 0, 0.353);
+    --color-frost-light: rgba(255, 255, 255, 0.119);
+
     /* Semantic */
     --color-background: var(--color-neutral-100);
     --color-text: var(--color-neutral-1000);

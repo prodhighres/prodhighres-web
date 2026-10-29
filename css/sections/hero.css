@@ -1,0 +1,60 @@
+section.hero {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--space-6);
+    z-index: var(--z-background);
+}
+
+.hero-image {
+    position: absolute;
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+    filter: brightness(0.5) saturate(0);
+    z-index: var(--z-background);
+}
+
+.hero-logo {
+    z-index: var(--z-base);
+    width: 10%;
+    min-width: 100px;
+    height: auto;
+    cursor: pointer;
+    scale: 1;
+    transition: var(--motion-focus);
+}
+
+section.hero .container {
+    z-index: var(--z-base);
+}
+
+section.hero button {
+    background-color: var(--color-frost-light);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: var(--color-neutral-0);
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-frost-light);
+    transition: var(--motion-focus);
+    scale: 1;
+}
+
+section.hero button:hover {
+    background-color: var(--color-frost-dark);
+    scale: 1.1;
+}
+
+.hero button#spotify:hover {
+    background-color: #1DB954;
+}
+
+.hero button#beatstars:hover {
+    background-color: #EB0000;
+}

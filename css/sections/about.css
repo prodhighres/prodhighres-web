@@ -1,0 +1,47 @@
+section.about {
+    background-color: var(--color-neutral-900);
+    color: var(--color-neutral-0);
+}
+
+.about-panel {
+    width: min(100%, 48rem);
+    background-color: var(--color-frost-light);
+    border-radius: var(--radius-2xl);
+    border: 1px solid var(--color-frost-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-panel .icon{
+    width: 22px;
+}
+
+.about-text {
+    z-index: var(--z-overlay);
+    margin-right: 20%;
+}
+
+.about-image {
+    position: absolute;
+    right: 0;
+    aspect-ratio: auto;
+    height: 100%;
+    z-index: var(--z-base);
+    mask-image: linear-gradient( to left, black 0%, transparent 80%);
+    filter: saturate(1.8);
+}
+
+@media (max-width: 600px) {
+    .about-image {
+        left: 0;
+        top: 0;
+        mask-image: linear-gradient( to bottom, black 0%, transparent 70%);
+        height: auto;
+        width: 100%;
+    }
+
+    .about-text {
+        margin-top: 20%;
+        margin-right: 0;
+    }
+} 

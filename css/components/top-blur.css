@@ -1,0 +1,22 @@
+.top-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    z-index: var(--z-modal);
+    pointer-events: none;
+}
+
+.top-blur::before {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    content: '';
+    z-index: var(--z-overlay);
+    backdrop-filter: blur(20px);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 15%, rgba(52,52,52,1) 35%, rgba(229,229,229,0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 15%, rgba(52,52,52,1) 35%, rgba(229,229,229,0) 100%);
+}

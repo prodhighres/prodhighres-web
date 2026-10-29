@@ -8,9 +8,9 @@
         DURATION SCALE
     ================================= */
 
-    --duration-fast: 150ms;
-    --duration-medium: 300ms;
-    --duration-slow: 500ms;
+    --duration-fast: 0.15s;
+    --duration-medium: 0.3s;
+    --duration-slow: 0.5s;
 
     /* =================================
         EASING SCALE
@@ -51,4 +51,8 @@
     --motion-elastic:
         all var(--duration-slow)
         var(--ease-elastic);
+
+    --motion-appear:
+        all var(--duration-slow)
+        var(--ease-snappy);
 }

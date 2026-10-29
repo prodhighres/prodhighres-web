@@ -1,0 +1,11 @@
+.padding-sm {
+    padding: var(--space-3);
+}
+
+.padding-md {
+    padding: var(--space-5);
+}
+
+.padding-lg {
+    padding: var(--space-7);
+}

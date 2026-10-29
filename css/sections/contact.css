@@ -1,0 +1,87 @@
+input,
+textarea {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid var(--color-frost-light);
+    border-bottom: 1px solid var(--color-frost-light);
+    background: none;
+    padding: var(--space-3);
+    width: 100%;
+    color: var(--color-neutral-0);
+    resize: vertical;
+    transition: var(--motion-focus);
+}
+
+input:focus-visible,
+textarea:focus-visible {
+    background: var(--color-frost-light)
+}
+
+section.contact {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-neutral-1000);
+    width: 100%;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    outline: 1px solid var(--color-frost-light);
+    border-radius: var(--radius-lg);
+    width: min(100%, 48rem);
+    color: var(--color-neutral-0);
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(17, 17, 17));
+}
+
+.contact .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-2);
+    background-color: var(--color-neutral-900);
+    padding: var(--space-4);
+    width: 100%;
+    color: var(--color-neutral-0);
+    scale: 1;
+    transition: var(--motion-focus);
+    border: 1px solid transparent;
+}
+
+.contact .submit:hover {
+    border: 1px solid var(--color-frost-light);
+}
+
+.mail {
+    display: flex;
+    width: 100%;
+}
+
+.message {
+    width: 100%;
+    min-height: 200px;
+    resize: vertical;
+}
+
+@media (max-width: 640px) {
+    .contact {
+        padding-inline: var(--space-5);
+    }
+
+    .contact-form-flex {
+        flex-direction: column;
+    }
+}
+
+.contact-mail-link {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .contact-form-title {
+        flex-direction: column;
+    }
+}

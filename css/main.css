@@ -27,7 +27,33 @@
    LAYOUT
 ========================= */
 
+@import url('./layout/spacing.css');
+@import url('./layout/alignment.css');
+@import url('./layout/margin.css');
+@import url('./layout/padding.css');
 @import url('./layout/container.css');
 @import url('./layout/grid.css');
 @import url('./layout/stack.css');
-@import url('./layout/section.css');
+@import url('./layout/sections.css');
+
+/* =========================
+   COMPONENTS
+========================= */
+
+@import url('./components/top-blur.css');
+@import url('./components/navbar.css');
+
+/* =========================
+   SECTIONS
+========================= */
+
+@import url('./sections/hero.css');
+@import url('./sections/about.css');
+@import url('./sections/contact.css');
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@import url('./animations/shine.css');
+@import url('./animations/focus.css');

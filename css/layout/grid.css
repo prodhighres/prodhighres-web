@@ -5,7 +5,7 @@
 /* Base Grid */
 .grid {
   display: grid;
-  gap: var(--grid-gap-md);
+  gap: var(--space-4);
 }
 
 /* Columns */
@@ -15,8 +15,3 @@
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
 .grid-6 { grid-template-columns: repeat(6, 1fr); }
 .grid-12 { grid-template-columns: repeat(12, 1fr); }
-
-/* Gaps */
-.grid-sm { gap: var(--grid-gap-sm); }
-.grid-md { gap: var(--grid-gap-md); }
-.grid-lg { gap: var(--grid-gap-lg); }

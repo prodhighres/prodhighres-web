@@ -1,0 +1,20 @@
+.focus:hover {
+    animation: refocus 1.7s ease-in-out;
+    scale: 2;
+    transition: scale 1.7s ease;
+    z-index: var(--z-modal);
+}
+
+@keyframes refocus {
+    0% {
+        filter: blur(0);
+    }
+
+    35% {
+        filter: blur(10px);
+    }
+
+    100% {
+        filter: blur(0);
+    }
+}
