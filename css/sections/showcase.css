@@ -21,6 +21,7 @@
     position: relative;
     overflow: hidden;
     margin-right: var(--space-7);
+    cursor: pointer;
 }
 
 .beatcard img {
@@ -31,7 +32,7 @@
     overflow: hidden;
 }
 
-.beatcard .title {
+.beatcard .info {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -47,8 +48,22 @@
     gap: var(--space-5);
 }
 
-.beatcard .title i {
+.beatcard .info i {
     font-size: 24px;
+}
+
+.beatcard .pause {
+    display: none;
+}
+
+/* Paused */
+.beatcard.playing .pause {
+    display: flex;
+}
+
+/* Playing */
+.beatcard.playing .play {
+    display: none;
 }
 
 .beatcard .frost {

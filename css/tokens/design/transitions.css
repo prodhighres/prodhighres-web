@@ -51,8 +51,4 @@
     --motion-elastic:
         all var(--duration-slow)
         var(--ease-elastic);
-
-    --motion-appear:
-        all var(--duration-slow)
-        var(--ease-snappy);
 }

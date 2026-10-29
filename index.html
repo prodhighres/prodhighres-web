@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Highres</title>
     
-    <link rel="icon" href="assets/icons/icon-dot.svg" type="image/svg+xml">
+    <link rel="icon" href="assets/symbols/icon-dot.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/main.css">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
@@ -21,11 +21,11 @@
     <div class="top-blur"></div>
     <div class="navbar-container">
         <div class="navbar-mobile">
-            <a href="#hero"><img class="navbar-logo-mobile" src="assets/icons/icon-dot.svg"></a>
+            <a href="#hero"><img class="navbar-logo-mobile" src="assets/symbols/icon-dot.svg"></a>
             <i class="ph-bold ph-plus" id="menu-toggle"></i>
         </div>
         <nav class="navbar">
-            <a href="#hero"><img class="navbar-logo" src="assets/images/logo-blur.png" alt="Home"></a>
+            <a href="#hero"><img class="navbar-logo" src="assets/symbols/logo-blur.png" alt="Home"></a>
             <a href="#about"><button><h5>About</h5></button></a>
             <!--<a href="#licences"><button><h5>Licences</h5></button></a>-->
             <a href="#contact"><button><h5>Contact</h5></button></a>
@@ -33,8 +33,8 @@
         </nav>
     </div>
     <section class="hero section-lg center" id="hero">
-        <img class="hero-image" src="assets/images/hero1.jpg" alt="Hero Image">
-        <img class="hero-logo focus" src="assets/icons/icon-logo-white.svg" alt="Home" id="hero-logo">
+        <img class="hero-image" src="assets/images/hero/hero1.jpg" alt="Hero Image">
+        <img class="hero-logo focus" src="assets/symbols/icon-logo-white.svg" alt="Home" id="hero-logo">
         <audio id="logo-sound" src="assets/audio/vocalsignature.wav" preload="auto"></audio>
         <div class="container middle gap-md">
             <a href="https://open.spotify.com/intl-de/artist/6RTWR0vIiHFyxwuvov4zXa?si=mqc0kr9URBWt9SNVLEmoMw" target="_blank">
@@ -47,50 +47,35 @@
         <div class="about-panel container left gap-sm margin-lg">
             <div class="about-text container column gap-md padding-lg">
                 <div class="container gap-md">
-                    <img class="icon" src="assets/icons/icon-dot.svg">
+                    <img class="icon" src="assets/symbols/icon-dot.svg">
                     <h2 class="decorative">About</h2>
                 </div>
                 <p class="decorative">
                     Highres is a beatproducer based in switzerland. The name highres – high resolution means to strive for a sharp, clean and multidimensional character. His sound is meticulously designed by hand often mixing layers or using synthesizers to create rich and unique soundscapes. Each instrumental is a story to be told, while it leaves behind a feeling on it’s own. “Music is a feeling, not sound”
                 </p>
             </div>
-            <img class="about-image" src="assets/images/hero.gif">
+            <img class="about-image" src="assets/images/about/texture1.gif">
         </div>
     </section>
-    <section class="showcase section-lg middle center">
-        <a href="#"><div class="beatcard">
-            <img src="assets/images/Born criminal.jpg">
-            <div class="frost"></div>
-            <div class="title">
-                <i class="ph-bold ph-spotify-logo"></i>
-                <h3>BORN CRIMINAL</h3>
-            </div>
-        </div></a>
+    <section class="showcase section-lg middle center" id="showcase">
 
-        <a href="#"><div class="beatcard">
-            <img src="assets/images/hero5.jpg">
-            <div class="frost"></div>
-            <div class="title">
-                <i class="ph-bold ph-spotify-logo"></i>
-                <h3>DUSTY</h3>
-            </div>
-        </div></a>
-
-        <a href="#"><div class="beatcard">
-            <img src="assets/images/hero4.jpg">
-            <div class="frost"></div>
-            <div class="title">
-                <i class="ph-bold ph-spotify-logo"></i>
-                <h3>MONDE TRISTE</h3>
-            </div>
-        </div></a>
-
+        <template id="beatcard-template">
+                <div><div class="beatcard paused">
+                    <img src="" alt="">
+                    <div class="frost"></div>
+                    <div class="info">
+                        <i class="ph-fill ph-play play"></i>
+                        <i class="ph-fill ph-pause pause"></i>
+                        <h3 class="title"></h3>
+                    </div>
+                </div></div>
+        </template>
     </section>
     <section class="contact section-lg middle center" id="contact">
             <form class="contact-form padding-lg margin-lg" id="contact-form" method="post">
                 <div class="contact-form-title container spread gap-lg">
                     <div class="container center gap-sm">
-                        <img src="assets/icons/star.svg" style="height: 36px;">
+                        <img src="assets/symbols/star.svg" style="height: 36px;">
                         <h3 class="decorative">Get in touch</h3>
                     </div>
                     <div class="container center gap-md" style="width: fit-content;">

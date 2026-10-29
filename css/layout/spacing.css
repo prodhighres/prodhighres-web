@@ -9,3 +9,39 @@
 .gap-lg {
   gap: var(--space-6);
 }
+
+.padding-sm {
+    padding: var(--space-3);
+}
+
+.padding-md {
+    padding: var(--space-5);
+}
+
+.padding-lg {
+    padding: var(--space-7);
+}
+
+@media (max-width: 600px) {
+    .padding-sm {
+        padding: var(--space-2);
+    }
+
+    .padding-md {
+        padding: var(--space-3);
+    }
+
+    .padding-lg {
+        padding: var(--space-5);
+    } 
+}
+
+.margin-lg {
+    margin: var(--space-9) var(--space-7);
+}
+
+@media (max-width: 600px) {
+    .margin-lg {
+        margin: var(--space-8) var(--space-3);
+    }
+}

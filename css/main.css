@@ -29,8 +29,6 @@
 
 @import url('./layout/spacing.css');
 @import url('./layout/alignment.css');
-@import url('./layout/margin.css');
-@import url('./layout/padding.css');
 @import url('./layout/container.css');
 @import url('./layout/grid.css');
 @import url('./layout/stack.css');

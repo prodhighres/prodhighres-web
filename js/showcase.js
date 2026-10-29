@@ -1,0 +1,92 @@
+
+const showcaseCards = [
+    {
+        title: "BORN CRIMINAL",
+        image: "assets/images/showcase/born criminal.jpg",
+        audio: "assets/audio/born criminal - demo LQ.mp3",
+    },
+    {
+        title: "DUSTY",
+        image: "assets/images/showcase/placeholder3.jpg",
+        audio: "assets/audio/born criminal - demo LQ.mp3",
+    },
+    {
+        title: "MONDE TRISTE",
+        image: "assets/images/showcase/placeholder2.jpg",
+        audio: "assets/audio/born criminal - demo LQ.mp3",
+    }
+];
+
+const showcase = document.querySelector("#showcase");
+const template = document.querySelector("#beatcard-template");
+
+let currentAudio = null;
+let currentCard = null;
+
+showcaseCards.forEach(card => {
+    const clone = template.content.cloneNode(true);
+
+    const beatcard = clone.querySelector(".beatcard");
+    const image = clone.querySelector("img");
+    const title = clone.querySelector(".title");
+
+    image.src = card.image;
+    image.alt = card.title;
+    title.textContent = card.title;
+
+    // Create audio only if a source exists
+    const audio = card.audio ? new Audio(card.audio) : null;
+
+    beatcard.addEventListener("click", () => {
+        // Do nothing if this card has no audio
+        if (!audio) return;
+
+        // Pause the current beat
+        if (currentAudio === audio && !audio.paused) {
+            audio.pause();
+            beatcard.classList.remove("playing");
+            return;
+        }
+
+        // Stop the previous beat
+        if (currentAudio && currentAudio !== audio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+
+            currentCard.classList.remove("playing");
+        }
+
+        // Play or resume the selected beat
+        currentAudio = audio;
+        currentCard = beatcard;
+
+        audio.play()
+            .then(() => {
+                beatcard.classList.add("playing");
+            })
+            .catch(error => {
+                console.error("Playback failed:", error);
+
+                beatcard.classList.remove("playing");
+
+                if (currentAudio === audio) {
+                    currentAudio = null;
+                    currentCard = null;
+                }
+            });
+    });
+
+    // Reset the card when playback ends
+    if (audio) {
+        audio.addEventListener("ended", () => {
+            beatcard.classList.remove("playing");
+
+            if (currentAudio === audio) {
+                currentAudio = null;
+                currentCard = null;
+            }
+        });
+    }
+
+    showcase.appendChild(clone);
+});

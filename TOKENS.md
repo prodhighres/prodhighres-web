@@ -16,6 +16,9 @@
 - `--color-brand-primary`
 - `--color-brand-secondary`
 
+- `--color-frost-light`
+- `--color-frost-dark`
+
 ### Semantic Colors
 - `--color-background`
 - `--color-text`
