@@ -24,6 +24,12 @@
     width: fit-content;
     height: calc(48px + var(--space-2));
     margin: var(--space-6) var(--space-4);
+    scale: 1;
+    transition: scale var(--duration-medium) var(--ease-standard);
+}
+
+.navbar:hover {
+    scale: 1.05;
 }
 
 .navbar-logo {
@@ -106,6 +112,10 @@
         transition: opacity var(--duration-slow) var(--ease-snappy);
         pointer-events: none;
         z-index: var(--z-background);
+    }
+
+    .navbar:hover {
+        scale: 1;
     }
 
     .navbar button {
