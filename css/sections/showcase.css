@@ -5,7 +5,6 @@
     justify-content: left;
     overflow-x: scroll;
     scroll-snap-align: initial;
-    padding: var(--space-3);
     background: linear-gradient(to bottom, var(--color-neutral-900) 0%, black 100%);
 }
 
@@ -20,7 +19,7 @@
     height: auto;
     position: relative;
     overflow: hidden;
-    padding: var(--space-3);
+    padding: var(--space-7);
 }
 
 .beatcard img {
