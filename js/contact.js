@@ -30,7 +30,7 @@ export function loadContact() {
 
     try {
         const response = await fetch(
-            "https://rtywkbbhkmqremnshjjn.supabase.co",
+            "https://rtywkbbhkmqremnshjjn.supabase.co/functions/v1/contact-form",
             {
                 method: "POST",
                 headers: {
