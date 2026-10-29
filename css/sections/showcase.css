@@ -5,6 +5,7 @@
     justify-content: left;
     overflow-x: scroll;
     scroll-snap-align: initial;
+    padding-left: var(--space-7);
     background: linear-gradient(to bottom, var(--color-neutral-900) 0%, black 100%);
 }
 
@@ -13,7 +14,7 @@
 }
 
 .beatcard {
-    width: 75vw;
+    width: 100vw;
     max-width: 500px;
     display: flex;
     height: auto;
