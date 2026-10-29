@@ -12,6 +12,12 @@ section.about {
     position: relative;
     overflow: hidden;
     box-shadow: var(shadow-xl);
+    scale: 1;
+    transition: scale var(--duration-medium) var(--ease-standard);
+}
+
+.about-panel:hover {
+    scale: 1.02;
 }
 
 .about-panel .icon{
@@ -34,6 +40,10 @@ section.about {
 }
 
 @media (max-width: 600px) {
+    .about-panel:hover {
+        scale: 1;
+    }
+
     .about-image {
         left: 0;
         top: 0;
