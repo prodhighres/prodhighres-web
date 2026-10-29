@@ -4,7 +4,8 @@ section.about {
 }
 
 .about-panel {
-    width: min(100%, 48rem);
+    display: flex;
+    width: 100%;
     background-color: var(--color-frost-light);
     border-radius: var(--radius-2xl);
     border: 1px solid var(--color-frost-light);
