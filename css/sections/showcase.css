@@ -1,0 +1,58 @@
+.showcase {
+    overflow-x: scroll;
+    width: auto;
+    display: flex;
+    justify-content: left;
+    overflow-x: scroll;
+}
+
+.beatcard {
+    width: 100vw;
+    display: flex;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.beatcard img {
+    aspect-ratio: 1;
+    width: 100%;
+    object-fit: cover;
+    background-color: var(--color-neutral-900);
+}
+
+.beatcard .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--space-5);
+    box-sizing: border-box;
+    color: var(--color-neutral-0);
+    z-index: 1;
+    isolation: isolate;
+}
+
+.beatcard .frost {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.beatcard .frost::before {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    rotate: 15deg;
+    transform: translateY(25%) scaleX(1.5);
+    height: 50%;
+    content: '';
+    z-index: var(--z-overlay);
+    backdrop-filter: blur(20px);
+    background-color: var(--color-frost-dark);
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 15%, rgba(52,52,52,1) 35%, rgba(229,229,229,0) 100%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 15%, rgba(52,52,52,1) 35%, rgba(229,229,229,0) 100%);
+}
