@@ -16,6 +16,7 @@
 
 .beatcard img {
     aspect-ratio: 1;
+    max-height: 500px;
     width: 100%;
     object-fit: cover;
     background-color: var(--color-neutral-900);
