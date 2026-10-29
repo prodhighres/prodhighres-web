@@ -5,6 +5,7 @@
     justify-content: left;
     overflow-x: scroll;
     scroll-snap-align: initial;
+    padding-right: var(--space-7);
     background: linear-gradient(to bottom, var(--color-neutral-900) 0%, black 100%);
 }
 
@@ -13,13 +14,13 @@
 }
 
 .beatcard {
-    width: 100vw;
+    width: 65vw;
     max-width: 500px;
     display: flex;
     height: auto;
     position: relative;
     overflow: hidden;
-    padding: var(--space-7);
+    margin-left: var(--space-7);
 }
 
 .beatcard img {
@@ -27,6 +28,7 @@
     height: auto;
     width: 100%;
     object-fit: cover;
+    overflow: hidden;
 }
 
 .beatcard .title {
@@ -79,14 +81,15 @@
     }
 
     .beatcard {
-        width: 100vw;
         max-width: 1000px;
+        height: 500px;
         margin-left: var(--space-8);
+        padding: var(--space-7);
     }
 
     .beatcard img {
-        max-height: 500px;
-        padding: var(--space-7);
+        height: 100%;
+        width: 100%;
     }
 
 
