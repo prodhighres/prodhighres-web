@@ -97,12 +97,12 @@
 
 .lyrics-panel button.copied {
     scale: 1.1;
-    width: 100px;
+    width: 105px;
 }
 
 .lyrics-panel button.deleted {
     scale: 1.1;
-    width: 104px;
+    width: 115px;
 }
 
 .lyrics-actions-text {
