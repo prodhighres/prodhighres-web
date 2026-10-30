@@ -10,7 +10,7 @@ section.hero {
     z-index: var(--z-background);
 }
 
-.hero-image {
+.hero-cover {
     position: absolute;
     display: flex;
     object-fit: cover;
