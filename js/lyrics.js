@@ -1,16 +1,9 @@
-console.log({
-    lyricsTitle,
-    lyricsText,
-    lyricsButton
-});
-
 const lyricsTitle = document.querySelector(".lyrics-title");
 const lyricsText = document.querySelector(".lyrics-text");
 const lyricsButton = document.querySelector(".lyrics-panel button");
 
-// Auto resize
 function autoResize(textarea) {
-    textarea.style.height = "auto";
+    textarea.style.height = "0px";
     textarea.style.height = `${textarea.scrollHeight}px`;
 }
 
