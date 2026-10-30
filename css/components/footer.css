@@ -1,7 +1,6 @@
 .footer-container {
-    background-color: var(--color-neutral-1000);
+    background: linear-gradient(to top, var(--color-neutral-1000) 50%, transparent 100%);
     color: var(--color-neutral-0);
-    border-top: 1px solid var(--color-frost-light);
     z-index: var(--z-modal);
     position: relative;
 }

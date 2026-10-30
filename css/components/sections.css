@@ -5,4 +5,5 @@ section {
 
 .section-container {
   background: linear-gradient(to bottom, var(--color-neutral-900) 0%, black 100%);
+  padding-bottom: 0;
 }
