@@ -31,11 +31,24 @@ h3,
   font-weight: var(--fw-semibold);
 }
 
+h4,
+.h4 {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+}
+
+h5,
+.h5 {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+}
+
 /* Paragraph */
 
 p {
   font-size: var(--fs-md);
   line-height: var(--lh-relaxed);
+  font-weight: var(--fw-regular);
 }
 
 /* Small text */

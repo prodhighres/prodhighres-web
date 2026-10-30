@@ -26,6 +26,7 @@
         FONT WEIGHTS
     ================================= */
 
+    --fw-thin: 300;
     --fw-regular: 400;
     --fw-medium: 500;
     --fw-semibold: 600;
