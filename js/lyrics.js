@@ -36,17 +36,9 @@ function updateRemark() {
 lyricsTitle.value = localStorage.getItem("lyricsTitle") || "";
 lyricsText.value = localStorage.getItem("lyricsText") || "";
 
-// Initial button visibility
+// Initial UI states
 updateButtonVisibility();
-
-// Restore saved lyrics
-lyricsTitle.value = localStorage.getItem("lyricsTitle") || "";
-lyricsText.value = localStorage.getItem("lyricsText") || "";
-
-// Initial button visibility
-updateButtonVisibility();
-
-// Initial cursor visibility
+updateRemark();
 updateTypingCursor();
 
 // Title input
