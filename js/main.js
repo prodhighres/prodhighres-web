@@ -1,3 +1,4 @@
+import "./lyrics.js"
 import "./showcase.js"
 import "./navbar.js";
 import "./audio.js";

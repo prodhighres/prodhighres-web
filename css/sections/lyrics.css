@@ -54,13 +54,13 @@ section.lyrics {
     border: 1px solid var(--color-frost-light);
     scale: 1;
     transition: all var(--duration-medium) var(--ease-standard);
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
 }
 
-.lyrics-panel button:hover {
+.lyrics-panel button.copied {
     scale: 1.1;
-    width: 85px;
+    width: 95px;
 }
 
 .lyrics-actions-text {
@@ -69,7 +69,7 @@ section.lyrics {
     transition: all var(--duration-medium) var(--ease-standard);
 }
 
-.lyrics-panel button:hover .lyrics-actions-text {
+.lyrics-panel button.copied .lyrics-actions-text {
     transform: translateX(0%);
     opacity: 1;
 }
