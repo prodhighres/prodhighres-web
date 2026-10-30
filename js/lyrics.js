@@ -172,14 +172,13 @@ lyricsButton.addEventListener("click", async (event) => {
     }
 });
 
-// Warn before leaving the page if lyrics exist
 window.addEventListener("beforeunload", (event) => {
     const hasContent =
         lyricsTitle.value.trim() !== "" ||
         lyricsText.value.trim() !== "";
 
-    if (!hasContent) return;
-
-    event.preventDefault();
-    event.returnValue = "";
+    if (hasContent) {
+        event.preventDefault();
+        event.returnValue = "";
+    }
 });
