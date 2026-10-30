@@ -4,7 +4,7 @@ const lyricsText = document.querySelector(".lyrics-text");
 const lyricsButton = document.querySelector(".lyrics-copy-button");
 const deleteButton = document.querySelector(".lyrics-delete-button");
 
-let lyricsCopied = false;
+let lyricsCopied = localStorage.getItem("lyricsCopied") === "true";
 
 function autoResize(textarea) {
     textarea.style.height = "0px";
@@ -56,9 +56,10 @@ lyricsTitle.addEventListener("input", () => {
     localStorage.setItem("lyricsTitle", lyricsTitle.value);
     updateButtonVisibility();
     updateTypingCursor();
-    updateRemark()
 
     lyricsCopied = false;
+    localStorage.setItem("lyricsCopied", "false");
+    updateRemark();
 
     document.querySelector(".typing-cursor").classList.toggle(
         "hidden",
@@ -103,9 +104,10 @@ lyricsText.addEventListener("input", () => {
     lyricsText.setCustomValidity("");
     localStorage.setItem("lyricsText", lyricsText.value);
     updateButtonVisibility();
-    updateRemark()
 
     lyricsCopied = false;
+    localStorage.setItem("lyricsCopied", "false");
+    updateRemark();
 });
 
 // Initial resize
@@ -130,6 +132,7 @@ deleteButton.addEventListener("click", () => {
     // Clear saved lyrics
     localStorage.removeItem("lyricsTitle");
     localStorage.removeItem("lyricsText");
+    localStorage.removeItem("lyricsCopied");
 
     // Reset textarea heights
     autoResize(lyricsTitle);
@@ -139,7 +142,9 @@ deleteButton.addEventListener("click", () => {
     const deleteText = deleteButton.querySelector("h5");
     deleteText.textContent = "Deleted";
 
-    deleteButton.classList.add("deleted");
+    updateRemark()
+
+    deleteButton.classList.add("deleted");    
 
     setTimeout(() => {
         deleteText.textContent = "Delete";
@@ -150,8 +155,6 @@ deleteButton.addEventListener("click", () => {
         // Show Typing cursor after deletion again
         updateTypingCursor();
     }, 2000);
-
-    updateRemark()
 });
 
 // Copy button
@@ -184,14 +187,14 @@ lyricsButton.addEventListener("click", async (event) => {
         );
 
         lyricsCopied = true;
+        localStorage.setItem("lyricsCopied", "true");
+        updateRemark();
 
         lyricsButton.classList.add("copied");
 
         setTimeout(() => {
             lyricsButton.classList.remove("copied");
         }, 2300);
-
-        updateRemark()
 
     } catch (error) {
         console.error("Clipboard error:", error);
