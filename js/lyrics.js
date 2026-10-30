@@ -21,6 +21,17 @@ function updateButtonVisibility() {
     lyricsButton.classList.toggle("visible", hasContent);
 }
 
+function updateRemark() {
+    const hasContent =
+        lyricsTitle.value.trim() !== "" ||
+        lyricsText.value.trim() !== "";
+
+    document.querySelector(".lyrics-remark").classList.toggle(
+        "visible",
+        hasContent && !lyricsCopied
+    );
+}
+
 // Restore saved lyrics
 lyricsTitle.value = localStorage.getItem("lyricsTitle") || "";
 lyricsText.value = localStorage.getItem("lyricsText") || "";
@@ -45,6 +56,7 @@ lyricsTitle.addEventListener("input", () => {
     localStorage.setItem("lyricsTitle", lyricsTitle.value);
     updateButtonVisibility();
     updateTypingCursor();
+    updateRemark()
 
     lyricsCopied = false;
 
@@ -91,6 +103,7 @@ lyricsText.addEventListener("input", () => {
     lyricsText.setCustomValidity("");
     localStorage.setItem("lyricsText", lyricsText.value);
     updateButtonVisibility();
+    updateRemark()
 
     lyricsCopied = false;
 });
@@ -137,6 +150,8 @@ deleteButton.addEventListener("click", () => {
         // Show Typing cursor after deletion again
         updateTypingCursor();
     }, 2000);
+
+    updateRemark()
 });
 
 // Copy button
@@ -175,6 +190,8 @@ lyricsButton.addEventListener("click", async (event) => {
         setTimeout(() => {
             lyricsButton.classList.remove("copied");
         }, 2300);
+
+        updateRemark()
 
     } catch (error) {
         console.error("Clipboard error:", error);

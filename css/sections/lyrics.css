@@ -66,6 +66,19 @@
     color: var(--color-neutral-200);
 }
 
+.lyrics-remark {
+    pointer-events: none;
+    transition: var(--motion-focus);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-xxs);
+    color: var(--color-neutral-600);
+    display: none;
+}
+
+.lyrics-remark.visible {
+    display: flex;
+}
+
 .lyrics-panel button {
     font-size: var(--fs-sm);
     font-weight: var(--fw-semibold);

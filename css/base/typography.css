@@ -67,3 +67,7 @@ a {
 .decorative {
   font-family: var(--font-family-decorative);
 }
+
+.condensed {
+  font-family: var(--font-family-condensed);
+}
