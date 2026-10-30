@@ -45,7 +45,9 @@ lyricsButton.addEventListener("click", async (event) => {
 
     // Clipboard
     try {
-        await navigator.clipboard.writeText(`${title.toUpperCase()}\n–\n${text}`);
+        const capitalizedTitle = title.charAt(0).toUpperCase() + title.slice(1).toLowerCase();
+
+        await navigator.clipboard.writeText(`${capitalizedTitle}\n–\n${text}`);
 
         lyricsButton.classList.add("copied");
 
