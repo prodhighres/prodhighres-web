@@ -34,6 +34,10 @@
     display: none;
 }
 
+.showcase-heading {
+    color: var(--color-neutral-0);
+}
+
 .beatcard {
     flex: 0 0 var(--card-width);
     width: var(--card-width);
