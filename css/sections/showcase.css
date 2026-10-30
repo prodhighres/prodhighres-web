@@ -1,13 +1,24 @@
 
 .showcase {
-    --card-width: min(500px, calc(100vw));
+    --card-width: min(500px, calc(100vw - var(--space-7) - var(--space-7)));
 
     display: flex;
     gap: var(--space-7);
     width: 100%;
     overflow-x: auto;
 
+    padding-inline: max(
+        var(--space-7),
+        calc((100% - var(--card-width)) / 2)
+    );
+
+    scroll-padding-inline: max(
+        var(--space-7),
+        calc((100% - var(--card-width)) / 2)
+    );
+
     scroll-snap-type: x mandatory;
+
 
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
@@ -117,19 +128,20 @@
     -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 15%, rgba(52,52,52,1) 35%, rgba(229,229,229,0) 100%);
 }
 
+@media (max-width: 600px) {
+
+    .showcase {
+        --card-width: 100vw;
+
+        padding-inline: 0;
+        scroll-padding-inline: 0;
+    }
+
+}
+
 @media (min-width: 1200px) {
     .showcase {
         --card-width: min(1000px, calc(100vw - var(--space-8) - var(--space-8)));
-        
-        padding-inline: max(
-            var(--space-7),
-            calc((100% - var(--card-width)) / 2)
-        );
-
-        scroll-padding-inline: max(
-            var(--space-7),
-            calc((100% - var(--card-width)) / 2)
-        );
     }
 
     .beatcard {

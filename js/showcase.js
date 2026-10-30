@@ -127,6 +127,8 @@ function centerCard(card) {
     });
 }
 
+let scrollTimer;
+
 function updateFocusedCard() {
     const showcaseRect = showcase.getBoundingClientRect();
     const showcaseCenter = showcaseRect.left + showcaseRect.width / 2;
@@ -151,6 +153,32 @@ function updateFocusedCard() {
         card.classList.toggle("card-focus", card === closestCard);
     });
 }
+
+function syncFocusedTrack() {
+    if (currentIndex === -1) return;
+
+    const focusedCard = showcase.querySelector(".beatcard.card-focus");
+
+    if (!focusedCard || focusedCard === currentCard) return;
+
+    const index = tracks.findIndex(track => track.card === focusedCard);
+
+    if (index === -1) return;
+
+    const wasPlaying = !currentAudio.paused;
+
+    playTrack(index, wasPlaying);
+}
+
+showcase.addEventListener("scroll", () => {
+    updateFocusedCard();
+
+    clearTimeout(scrollTimer);
+
+    scrollTimer = setTimeout(() => {
+        syncFocusedTrack();
+    }, 100);
+});
 
 showcase.addEventListener("scroll", updateFocusedCard);
 
