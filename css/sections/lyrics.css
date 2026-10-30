@@ -7,7 +7,7 @@
 }
 
 .lyrics-panel textarea::placeholder {
-    color: var(--color-neutral-600);
+    color: var(--color-neutral-0);
 }
 
 .lyrics-panel textarea:focus {
