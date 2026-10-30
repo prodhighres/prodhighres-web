@@ -1,11 +1,31 @@
+
 .showcase {
-    overflow-x: scroll;
-    width: auto;
+    --card-width: min(500px, calc(100vw - var(--space-7) - var(--space-7)));
+
     display: flex;
-    justify-content: left;
-    overflow-x: scroll;
-    scroll-snap-align: initial;
-    padding-left: var(--space-7);
+    gap: var(--space-7);
+    width: 100%;
+    overflow-x: auto;
+
+    padding-inline: max(
+        var(--space-7),
+        calc((100% - var(--card-width)) / 2)
+    );
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: max(
+        var(--space-7),
+        calc((100% - var(--card-width)) / 2)
+    );
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.showcase.dragging,
+.showcase.dragging .beatcard {
+    cursor: grabbing;
+    user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -13,14 +33,31 @@
 }
 
 .beatcard {
-    width: 100vw;
-    max-width: 500px;
+    flex: 0 0 var(--card-width);
+    width: var(--card-width);
+    max-width: none;
+    box-sizing: border-box;
+
     display: flex;
     height: auto;
     position: relative;
     overflow: hidden;
-    margin-right: var(--space-7);
+
+    margin: 0;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+
     cursor: pointer;
+    scale: 0.95;
+
+    filter: blur(5px);
+
+    transition: var(--motion-drawer);
+}
+
+.beatcard.card-focus {
+    filter: blur(0px);
+    scale: 1;
 }
 
 .beatcard img {
@@ -91,13 +128,11 @@
 
 @media (min-width: 1200px) {
     .showcase {
-        padding-right: var(--space-8);
+        --card-width: min(1000px, calc(100vw - var(--space-8) - var(--space-8)));
     }
 
     .beatcard {
-        max-width: 1000px;
         height: 500px;
-        margin-left: var(--space-8);
         padding: var(--space-7);
     }
 
@@ -106,8 +141,7 @@
         width: 100%;
     }
 
-
     .beatcard .frost::before {
-        bottom: -30%;
+        bottom: -35%;
     }
 }

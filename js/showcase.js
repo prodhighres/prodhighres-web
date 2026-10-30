@@ -48,6 +48,112 @@ let currentIndex = -1;
 // Alle generierten Tracks
 const tracks = [];
 
+
+let isDragging = false;
+let startX = 0;
+let startScrollLeft = 0;
+let activePointerId = null;
+let suppressCardClick = false;
+
+showcase.addEventListener("pointerdown", (event) => {
+    if (event.pointerType !== "mouse" || event.button !== 0) return;
+
+    activePointerId = event.pointerId;
+    startX = event.clientX;
+    startScrollLeft = showcase.scrollLeft;
+    isDragging = false;
+});
+
+document.addEventListener("pointermove", (event) => {
+    if (event.pointerId !== activePointerId) return;
+
+    const distance = event.clientX - startX;
+
+    if (Math.abs(distance) > 5) {
+        isDragging = true;
+        showcase.classList.add("dragging");
+        event.preventDefault();
+    }
+
+    if (isDragging) {
+        showcase.scrollLeft = startScrollLeft - distance;
+    }
+});
+
+document.addEventListener("pointerup", (event) => {
+    if (event.pointerId !== activePointerId) return;
+
+    if (isDragging) {
+        suppressCardClick = true;
+    }
+
+    activePointerId = null;
+    isDragging = false;
+    showcase.classList.remove("dragging");
+});
+
+document.addEventListener("pointercancel", () => {
+    activePointerId = null;
+    isDragging = false;
+    showcase.classList.remove("dragging");
+});
+
+// Prevent a drag from accidentally triggering a card click
+showcase.addEventListener("click", (event) => {
+    if (!suppressCardClick) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+    suppressCardClick = false;
+}, true);
+
+function centerCard(card) {
+    if (!card) return;
+
+    const cardRect = card.getBoundingClientRect();
+    const showcaseRect = showcase.getBoundingClientRect();
+
+    const cardCenter =
+        cardRect.left - showcaseRect.left +
+        showcase.scrollLeft +
+        cardRect.width / 2;
+
+    const targetScroll =
+        cardCenter - showcase.clientWidth / 2;
+
+    showcase.scrollTo({
+        left: targetScroll,
+        behavior: "smooth"
+    });
+}
+
+function updateFocusedCard() {
+    const showcaseRect = showcase.getBoundingClientRect();
+    const showcaseCenter = showcaseRect.left + showcaseRect.width / 2;
+
+    let closestCard = null;
+    let closestDistance = Infinity;
+
+    const cards = showcase.querySelectorAll(".beatcard");
+
+    cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.left + rect.width / 2;
+        const distance = Math.abs(showcaseCenter - cardCenter);
+
+        if (distance < closestDistance) {
+            closestDistance = distance;
+            closestCard = card;
+        }
+    });
+
+    cards.forEach(card => {
+        card.classList.toggle("card-focus", card === closestCard);
+    });
+}
+
+showcase.addEventListener("scroll", updateFocusedCard);
+
 function setPlayerVisibility(visible) {
     audioplayerContainer.classList.toggle("visible", visible);
 }
@@ -113,6 +219,8 @@ function playTrack(index, shouldPlay = true) {
     currentAudio = track.audio;
     currentCard = track.card;
 
+    centerCard(currentCard);
+
     currentAudio.currentTime = 0;
 
     timeCurrent.textContent = "00:00";
@@ -151,6 +259,8 @@ function pauseAudio(hidePlayer = false) {
 function toggleAudio() {
     if (!currentAudio) return;
 
+    centerCard(currentCard);
+
     if (currentAudio.paused) {
         currentAudio.play()
             .then(updatePlayer)
@@ -170,6 +280,7 @@ function previousTrack() {
     // Bei mehr als 3 Sekunden an den Anfang springen
     if (currentAudio.currentTime > 3) {
         currentAudio.currentTime = 0;
+        centerCard(currentCard);
         updatePlayer();
         return;
     }
@@ -300,3 +411,6 @@ showcaseCards.forEach((card, index) => {
 
     showcase.appendChild(clone);
 });
+
+// Initialize focused card
+updateFocusedCard();
