@@ -57,7 +57,7 @@
 
 @media (max-width: 600px) {
     #audio-progress-container {
-        padding-bottom: 6%;
+        padding-bottom: 8%;
     }
 
     #audioplayer-container::before {
