@@ -4,6 +4,8 @@ const lyricsText = document.querySelector(".lyrics-text");
 const lyricsButton = document.querySelector(".lyrics-copy-button");
 const deleteButton = document.querySelector(".lyrics-delete-button");
 
+let lyricsCopied = false;
+
 function autoResize(textarea) {
     textarea.style.height = "0px";
     textarea.style.height = `${textarea.scrollHeight}px`;
@@ -42,6 +44,9 @@ lyricsTitle.addEventListener("input", () => {
     lyricsTitle.setCustomValidity("");
     localStorage.setItem("lyricsTitle", lyricsTitle.value);
     updateButtonVisibility();
+    updateTypingCursor();
+
+    lyricsCopied = false;
 
     document.querySelector(".typing-cursor").classList.toggle(
         "hidden",
@@ -86,6 +91,8 @@ lyricsText.addEventListener("input", () => {
     lyricsText.setCustomValidity("");
     localStorage.setItem("lyricsText", lyricsText.value);
     updateButtonVisibility();
+
+    lyricsCopied = false;
 });
 
 // Initial resize
@@ -161,6 +168,8 @@ lyricsButton.addEventListener("click", async (event) => {
             `${capitalizedTitle}\n–\n${text}`
         );
 
+        lyricsCopied = true;
+
         lyricsButton.classList.add("copied");
 
         setTimeout(() => {
@@ -177,8 +186,8 @@ window.addEventListener("beforeunload", (event) => {
         lyricsTitle.value.trim() !== "" ||
         lyricsText.value.trim() !== "";
 
-    if (hasContent) {
+    if (hasContent && !lyricsCopied) {
         event.preventDefault();
-        event.returnValue = "";
+        event.returnValue = true;
     }
 });
