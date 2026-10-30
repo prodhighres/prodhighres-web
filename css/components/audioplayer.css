@@ -49,6 +49,7 @@
 #audio-progress-container {
     z-index: var(--z-overlay);
     width: min(100%, 48rem);
+    padding-bottom: 50px;
 }
 
 #audio-progress-bar {
