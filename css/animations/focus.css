@@ -2,7 +2,7 @@
     animation: refocus 1.7s ease-in-out;
     scale: 2;
     transition: scale 1.7s ease;
-    z-index: var(--z-modal);
+    z-index: var(--z-overlay-2);
 }
 
 @keyframes refocus {

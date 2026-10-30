@@ -21,17 +21,13 @@ section.hero {
 }
 
 .hero-logo {
-    z-index: var(--z-base);
+    z-index: var(--z-overlay-1);
     width: 10%;
     min-width: 100px;
     height: auto;
     cursor: pointer;
     scale: 1;
     transition: var(--motion-focus);
-}
-
-section.hero .container {
-    z-index: var(--z-base);
 }
 
 section.hero button {

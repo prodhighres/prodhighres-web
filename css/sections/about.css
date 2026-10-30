@@ -23,7 +23,7 @@ section.about {
 }
 
 .about-text {
-    z-index: var(--z-overlay);
+    z-index: var(--z-overlay-1);
     margin-right: 20%;
 }
 
@@ -32,7 +32,7 @@ section.about {
     right: 0;
     aspect-ratio: auto;
     height: 100%;
-    z-index: var(--z-base);
+    z-index: var(--z-background);
     mask-image: linear-gradient( to left, black 0%, transparent 80%);
     filter: saturate(1.8);
 }

@@ -189,18 +189,15 @@ function showCarouselHint() {
 
     carouselHintShown = true;
 
-    const cards = showcase.querySelectorAll(".beatcard");
+    const firstCard = showcase.querySelector(".beatcard");
 
-    cards.forEach((card, index) => {
-        setTimeout(() => {
-            card.classList.add("hint");
+    if (!firstCard) return;
 
-            card.addEventListener("animationend", () => {
-                card.classList.remove("hint");
-            }, { once: true });
+    firstCard.classList.add("hint");
 
-        }, index * 80);
-    });
+    firstCard.addEventListener("animationend", () => {
+        firstCard.classList.remove("hint");
+    }, { once: true });
 }
 
 function setPlayerVisibility(visible) {

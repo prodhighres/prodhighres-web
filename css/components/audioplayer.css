@@ -10,7 +10,7 @@
     left: 0;
     width: 100%;
     transform: translateY(100%);
-    z-index: var(--z-overlay);
+    z-index: var(--z-overlay-1);
     transition: var(--motion-drawer);
 }
 
@@ -41,7 +41,7 @@
 #audioplayer {
     height: auto;
     width: min(100%, 48rem);
-    z-index: var(--z-overlay);
+    z-index: var(--z-overlay-1);
 }
 
 #audioplayer #playtoggle {
@@ -49,7 +49,7 @@
 }
 
 #audio-progress-container {
-    z-index: var(--z-overlay);
+    z-index: var(--z-overlay-1);
     width: min(100%, 48rem);
     padding-top: var(--space-3);
     transition: var(--motion-drawer);

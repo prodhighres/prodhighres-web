@@ -5,12 +5,8 @@
 :root {
     /* Semantic */
     --z-background: -1;
-    --z-base: 1;
-    --z-dropdown: 100;
-    --z-sticky: 200;
-    --z-overlay: 300;
-    
-    --z-modal: 500;
-    --z-tooltip: 600;
-    --z-nav: 1000;
+    --z-overlay-1: 1;
+    --z-overlay-2: 2;
+    --z-nav: 50;
+    --z-nav-mobile: 100;
 }

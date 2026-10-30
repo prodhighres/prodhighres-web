@@ -67,7 +67,7 @@
     padding: var(--space-4);
     display: flex;
     justify-content: space-between;
-    z-index: var(--z-tooltip);
+    z-index: var(--z-nav-mobile);
     color: var(--color-neutral-0);
     position: fixed;
     top: 0;
@@ -135,6 +135,6 @@
         transform: translateX(0);
         opacity: 1;
         pointer-events: all;
-        z-index: var(--z-overlay);
+        z-index: var(--z-nav);
     }
 }

@@ -54,7 +54,7 @@
 
     filter: blur(5px);
 
-    transition: var(--motion-drawer);
+    transition: all var(--duration-slow) var(--ease-standard);
 }
 
 .beatcard.card-focus {
@@ -121,7 +121,7 @@
     transform: scaleX(2);
     height: 70%;
     content: '';
-    z-index: var(--z-overlay);
+    z-index: var(--z-overlay-1);
     backdrop-filter: blur(20px);
     background-color: var(--color-frost-dark);
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 15%, rgba(52,52,52,1) 35%, rgba(229,229,229,0) 100%);

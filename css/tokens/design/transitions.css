@@ -16,8 +16,7 @@
         EASING SCALE
     ================================= */
 
-    --ease-ease: ease;
-    --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-standard: ease;
     --ease-decelerate: cubic-bezier(0, 0, 0.2, 1);
     --ease-accelerate: cubic-bezier(0.4, 0, 1, 1);
 
@@ -43,7 +42,7 @@
 
     --motion-drawer:
         all var(--duration-medium)
-        var(--ease-ease);
+        var(--ease-standard);
 
     --motion-bounce:
         all var(--duration-medium)
