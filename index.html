@@ -32,7 +32,7 @@
             <a href="https://www.beatstars.com/prodhighres" target="_blank"><button class="highlight shine"><h5>Shop</h5></button></a>
         </nav>
     </div>
-    <section class="hero section-lg center" id="hero">
+    <section class="hero center" id="hero">
         <img class="hero-image" src="assets/images/hero/hero1.jpg" alt="Hero Image">
         <img class="hero-logo focus" src="assets/symbols/icon-logo-white.svg" alt="Home" id="hero-logo">
         <audio id="logo-sound" src="assets/audio/vocalsignature.wav" preload="auto"></audio>
@@ -43,54 +43,70 @@
                 <button class="shine" id="beatstars"><h4>Beatstars</h4></button></a>
         </div>
     </section>
-    <section class="about section-lg middle center" id="about">
-        <div class="about-panel container left gap-sm margin-lg">
-            <div class="about-text container column gap-md padding-lg">
-                <div class="container gap-md">
-                    <img class="icon" src="assets/symbols/icon-dot.svg">
-                    <h2 class="decorative">About</h2>
+    <div class="section-container container column padding-y-2xl gap-2xl">
+        <section class="about middle center padding-x-lg" id="about">
+            <div class="about-panel container left gap-sm">
+                <div class="about-text container column gap-md padding-lg">
+                    <div class="container gap-md">
+                        <img class="icon" src="assets/symbols/icon-dot.svg">
+                        <h2 class="decorative">About</h2>
+                    </div>
+                    <p class="decorative">
+                        Highres is a beatproducer based in switzerland. The name highres – high resolution means to strive for a sharp, clean and multidimensional character. His sound is meticulously designed by hand often mixing layers or using synthesizers to create rich and unique soundscapes. Each instrumental is a story to be told, while it leaves behind a feeling on it’s own. “Music is a feeling, not sound”
+                    </p>
                 </div>
-                <p class="decorative">
-                    Highres is a beatproducer based in switzerland. The name highres – high resolution means to strive for a sharp, clean and multidimensional character. His sound is meticulously designed by hand often mixing layers or using synthesizers to create rich and unique soundscapes. Each instrumental is a story to be told, while it leaves behind a feeling on it’s own. “Music is a feeling, not sound”
-                </p>
+                <img class="about-image" src="assets/images/about/texture1.gif">
             </div>
-            <img class="about-image" src="assets/images/about/texture1.gif">
-        </div>
-    </section>
-    <section class="showcase section-lg middle center" id="showcase">
+        </section>
+        <section class="showcase middle center" id="showcase">
 
-        <template id="beatcard-template">
-                <div><div class="beatcard paused">
-                    <img src="" alt="">
-                    <div class="frost"></div>
-                    <div class="info">
-                        <i class="ph-fill ph-play play"></i>
-                        <i class="ph-fill ph-pause pause"></i>
-                        <h3 class="title"></h3>
-                    </div>
-                </div></div>
-        </template>
-    </section>
-    <section class="contact section-lg middle center" id="contact">
-            <form class="contact-form padding-lg margin-lg" id="contact-form" method="post">
-                <div class="contact-form-title container spread gap-lg">
-                    <div class="container center gap-sm">
-                        <img src="assets/symbols/star.svg" style="height: 36px;">
-                        <h3 class="decorative">Get in touch</h3>
-                    </div>
-                    <div class="container center gap-md" style="width: fit-content;">
-                        <a href="https://www.instagram.com/prodhighres/" target="_blank"><i class="ph-bold ph-instagram-logo" style="font-size: 36px;"></i></a>
-                        <a href="https://www.tiktok.com/@prodhighres" target="_blank"><i class="ph-bold ph-tiktok-logo" style="font-size: 36px;"></i></a>
+            <template id="beatcard-template">
+                    <div><div class="beatcard paused">
+                        <img src="" alt="">
+                        <div class="frost"></div>
+                        <div class="info">
+                            <i class="ph-fill ph-play play"></i>
+                            <i class="ph-fill ph-pause pause"></i>
+                            <h3 class="title"></h3>
+                        </div>
+                    </div></div>
+            </template>
+        </section>
+        <section class="lyrics middle center padding-x-lg" id="lyrics">
+            <div class="lyrics-panel container">
+                <div class="lyrics-content container column padding-lg gap-md">
+                    <textarea class="lyrics-title decorative" placeholder="Lyrics" rows="1"></textarea>
+                    <textarea class="lyrics-text decorative" placeholder="Write your text in here..." rows="1"></textarea>
+                    <div class="lyrics-actions container right center gap-md">
+                        <button class="shine container center gap-sm" type="submit">
+                            <p class="lyrics-text">Copy</p>
+                            <i class="ph-fill ph-clipboard-text"></i>
+                        </button>
                     </div>
                 </div>
-                <input class="mail" id="contact-email" name="email" type="email" autocomplete="email" placeholder="Email" maxlength="50" required>
-                <textarea class="message" id="contact-message" name="message" rows="6" placeholder="Message" maxlength="2000" required></textarea>
-                <button class="submit shine" type="submit">
-                    <h5>Send message</h5>
-                    <i class="ph-bold ph-paper-plane-tilt"></i>
-                </button>
-            </form>
-        </div>
-    </section>
+            </div>
+        </section>
+        <section class="contact middle center padding-x-lg" id="contact">
+                <form class="contact-form padding-lg" id="contact-form" method="post">
+                    <div class="contact-form-title container spread gap-lg">
+                        <div class="container center gap-sm">
+                            <img src="assets/symbols/star.svg" style="height: 36px;">
+                            <h3 class="decorative">Get in touch</h3>
+                        </div>
+                        <div class="container center gap-md" style="width: fit-content;">
+                            <a href="https://www.instagram.com/prodhighres/" target="_blank"><i class="ph-bold ph-instagram-logo" style="font-size: 36px;"></i></a>
+                            <a href="https://www.tiktok.com/@prodhighres" target="_blank"><i class="ph-bold ph-tiktok-logo" style="font-size: 36px;"></i></a>
+                        </div>
+                    </div>
+                    <input class="mail" id="contact-email" name="email" type="email" autocomplete="email" placeholder="Email" maxlength="50" required>
+                    <textarea class="message" id="contact-message" name="message" rows="6" placeholder="Message" maxlength="2000" required></textarea>
+                    <button class="submit shine" type="submit">
+                        <h5>Send message</h5>
+                        <i class="ph-bold ph-paper-plane-tilt"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

@@ -1,0 +1,9 @@
+/* Base section */
+section {
+  display: flex;
+  padding-block: var(--space-10);
+}
+
+.section-container {
+  background: linear-gradient(to bottom, var(--color-neutral-900) 0%, black 100%);
+}

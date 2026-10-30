@@ -32,7 +32,6 @@
 @import url('./layout/container.css');
 @import url('./layout/grid.css');
 @import url('./layout/stack.css');
-@import url('./layout/sections.css');
 
 /* =========================
    COMPONENTS
@@ -40,6 +39,7 @@
 
 @import url('./components/top-blur.css');
 @import url('./components/navbar.css');
+@import url('./components/sections.css');
 
 /* =========================
    SECTIONS
@@ -49,6 +49,7 @@
 @import url('./sections/about.css');
 @import url('./sections/contact.css');
 @import url('./sections/showcase.css');
+@import url('./sections/lyrics.css');
 
 /* =========================
    ANIMATIONS

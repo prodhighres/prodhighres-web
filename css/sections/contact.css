@@ -1,5 +1,5 @@
-input,
-textarea {
+.contact-form input,
+.contact-form textarea {
     outline: none;
     border: none;
     border-bottom: 2px solid var(--color-frost-light);
@@ -12,13 +12,17 @@ textarea {
     transition: var(--motion-focus);
 }
 
-input:focus-visible,
-textarea:focus-visible {
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--color-neutral-600);
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
     background: var(--color-frost-light)
 }
 
 section.contact {
-    background-color: var(--color-neutral-1000);
     width: 100%;
 }
 

@@ -1,0 +1,58 @@
+section.lyrics {
+}
+
+.lyrics-panel {
+    transition: all var(--transition-quick);
+    border-radius: var(--border-radius-big);
+    background-color: var(--color-neutral-1000);
+    border: 1px solid var(--color-frost-light);
+    border-radius: var(--radius-2xl);
+    width: min(100%, 48rem);
+    transition: var(--motion-focus);
+}
+
+.lyrics-panel textarea::placeholder {
+    color: var(--color-neutral-600);
+}
+
+.lyrics-panel.lyrics-panel textarea:focus {
+    color: var(--color-neutral-0);
+}
+
+.lyrics-panel textarea {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    resize: none;
+    color: var(--color-neutral-400);
+    outline: none;
+}
+
+.lyrics-title {
+    font-size: var(--fs-2xl);
+    line-height: var(--lh-normal);
+    font-weight: var(--fw-semibold);
+} 
+
+.lyrics-text {
+    font-weight: var(--fw-semibold);
+    font-size: var(--fs-md);
+    line-height: var(--lh-relaxed);
+}
+
+.lyrics-panel button {
+    color: var(--color-neutral-0);
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--color-frost-light);
+    width: fit-content;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-frost-light);
+    scale: 1;
+    transition: var(--motion-focus);
+}
+
+.lyrics-panel button:hover {
+    scale: 1.1;
+}

@@ -7,13 +7,18 @@ const showcaseCards = [
     },
     {
         title: "MONDE TRISTE",
-        image: "assets/images/showcase/placeholder2.jpg",
+        image: "assets/images/showcase/placeholder6.jpg",
         audio: "assets/audio/monde triste - raw LQ.mp3",
     },
     {
         title: "REMORSE",
         image: "assets/images/showcase/placeholder5.jpg",
         audio: "assets/audio/remorse - raw LQ.mp3",
+    },
+    {
+        title: "HAIKU",
+        image: "assets/images/showcase/placeholder7.jpg",
+        audio: "assets/audio/haiku - raw LQ.mp3",
     }
 ];
 
