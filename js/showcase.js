@@ -157,7 +157,7 @@ showcase.addEventListener("scroll", updateFocusedCard);
 let carouselHintShown = false;
 
 function showCarouselHint() {
-    if (carouselHintShown || window.innerWidth >= 1200) return;
+    if (carouselHintShown || window.innerWidth >= 600) return;
 
     carouselHintShown = true;
 
