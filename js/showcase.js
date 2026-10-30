@@ -43,10 +43,14 @@ const progress = document.querySelector("#audio-progress");
 // Aktueller Player
 let currentAudio = null;
 let currentCard = null;
+let currentIndex = -1;
+
+// Alle generierten Tracks
+const tracks = [];
 
 function setPlayerVisibility(visible) {
-        audioplayerContainer.classList.toggle("visible", visible);
-    }
+    audioplayerContainer.classList.toggle("visible", visible);
+}
 
 
 // Zeit formatieren
@@ -90,31 +94,42 @@ function updatePlayer() {
 }
 
 
-// Beat abspielen
-function playAudio(audio, beatcard) {
+// Track auswählen und abspielen
+function playTrack(index, shouldPlay = true) {
+    const track = tracks[index];
 
-    // Vorherigen Beat stoppen
-    if (currentAudio && currentAudio !== audio) {
+    if (!track) return;
+
+    if (currentAudio && currentAudio !== track.audio) {
         currentAudio.pause();
         currentAudio.currentTime = 0;
-
-        if (currentCard) {
-            currentCard.classList.remove("playing");
-        }
     }
 
-    currentAudio = audio;
-    currentCard = beatcard;
+    if (currentCard && currentCard !== track.card) {
+        currentCard.classList.remove("playing");
+    }
+
+    currentIndex = index;
+    currentAudio = track.audio;
+    currentCard = track.card;
+
+    currentAudio.currentTime = 0;
+
+    timeCurrent.textContent = "00:00";
+    timeFull.textContent = "00:00";
+    progress.style.width = "0%";
 
     setPlayerVisibility(true);
 
-    audio.play()
-        .then(() => {
-            updatePlayer();
-        })
-        .catch(error => {
-            console.error("Playback failed:", error);
-        });
+    if (shouldPlay) {
+        currentAudio.play()
+            .then(updatePlayer)
+            .catch(error => {
+                console.error("Playback failed:", error);
+            });
+    } else {
+        updatePlayer();
+    }
 }
 
 
@@ -137,59 +152,97 @@ function toggleAudio() {
     if (!currentAudio) return;
 
     if (currentAudio.paused) {
-        playAudio(currentAudio, currentCard);
+        currentAudio.play()
+            .then(updatePlayer)
+            .catch(error => {
+                console.error("Playback failed:", error);
+            });
     } else {
         pauseAudio(false);
     }
 }
 
-// Zeit zurück- oder vorspulen
-function skipAudio(seconds) {
-    if (!currentAudio) return;
 
-    currentAudio.currentTime = Math.max(
-        0,
-        Math.min(
-            currentAudio.duration || Infinity,
-            currentAudio.currentTime + seconds
-        )
-    );
+// Vorherigen Track auswählen
+function previousTrack() {
+    if (currentIndex === -1) return;
 
-    updatePlayer();
+    // Bei mehr als 3 Sekunden an den Anfang springen
+    if (currentAudio.currentTime > 3) {
+        currentAudio.currentTime = 0;
+        updatePlayer();
+        return;
+    }
+
+    const wasPlaying = !currentAudio.paused;
+
+    const previousIndex =
+        (currentIndex - 1 + tracks.length) % tracks.length;
+
+    playTrack(previousIndex, wasPlaying);
+}
+
+
+// Nächsten Track auswählen
+function nextTrack() {
+    if (currentIndex === -1) return;
+
+    const wasPlaying = !currentAudio.paused;
+
+    const nextIndex =
+        (currentIndex + 1) % tracks.length;
+
+    playTrack(nextIndex, wasPlaying);
 }
 
 
 // Fortschrittsbalken verwenden
+let isSeeking = false;
+
 function seekAudio(event) {
     if (!currentAudio || !currentAudio.duration) return;
 
     const rect = progressBar.getBoundingClientRect();
+    const percentage = Math.max(
+        0,
+        Math.min(1, (event.clientX - rect.left) / rect.width)
+    );
 
-    const percentage = (event.clientX - rect.left) / rect.width;
-
-    currentAudio.currentTime =
-        Math.max(0, Math.min(1, percentage)) * currentAudio.duration;
-
+    currentAudio.currentTime = percentage * currentAudio.duration;
     updatePlayer();
 }
+
+progressBar.addEventListener("pointerdown", (event) => {
+    isSeeking = true;
+    progressBar.setPointerCapture(event.pointerId);
+    seekAudio(event);
+});
+
+progressBar.addEventListener("pointermove", (event) => {
+    if (!isSeeking) return;
+    seekAudio(event);
+});
+
+progressBar.addEventListener("pointerup", () => {
+    isSeeking = false;
+});
+
+progressBar.addEventListener("pointercancel", () => {
+    isSeeking = false;
+});
 
 
 // Globale Audioplayer-Controls
 playtoggle.addEventListener("click", toggleAudio);
 
-skipBack.addEventListener("click", () => {
-    skipAudio(-10);
-});
-
-skipForward.addEventListener("click", () => {
-    skipAudio(10);
-});
+skipBack.addEventListener("click", previousTrack);
+skipForward.addEventListener("click", nextTrack);
 
 progressBar.addEventListener("click", seekAudio);
 
 
 // Showcase-Karten erstellen
-showcaseCards.forEach(card => {
+showcaseCards.forEach((card, index) => {
     const clone = template.content.cloneNode(true);
 
     const beatcard = clone.querySelector(".beatcard");
@@ -204,6 +257,12 @@ showcaseCards.forEach(card => {
     const audio = card.audio ? new Audio(card.audio) : null;
 
     if (audio) {
+        const track = {
+            audio,
+            card: beatcard
+        };
+
+        tracks.push(track);
 
         // Audio-Events
         audio.addEventListener("loadedmetadata", () => {
@@ -222,24 +281,20 @@ showcaseCards.forEach(card => {
         audio.addEventListener("pause", updatePlayer);
 
         audio.addEventListener("ended", () => {
-            beatcard.classList.remove("playing");
-
             if (currentAudio === audio) {
-                updatePlayer();
+                nextTrack();
             }
         });
 
         // Karte anklicken
         beatcard.addEventListener("click", () => {
 
-            // Aktuellen Beat pausieren
             if (currentAudio === audio && !audio.paused) {
                 pauseAudio(true);
                 return;
             }
 
-            // Beat starten oder fortsetzen
-            playAudio(audio, beatcard);
+            playTrack(tracks.indexOf(track), true);
         });
     }
 

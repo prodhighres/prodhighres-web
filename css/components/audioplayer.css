@@ -55,14 +55,30 @@
     background-color: var(--color-frost-light);
     height: 5px;
     border-radius: var(--radius-full);
-    overflow: hidden;
+    overflow: visible;
+    position: relative;
+    cursor: pointer;
+    touch-action: pan-y;
+    cursor: grab;
+}
+
+#audio-progress-bar:active {
+    cursor: grabbing;
+}
+
+#audio-progress-bar::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    bottom: -15px;
+    left: 0;
+    right: 0;
 }
 
 #audio-progress {
     background-color: var(--color-neutral-400);
     width: none;
     height: 100%;
-    transition: var(--motion-focus);
 }
 
 #audio-progress-bar:hover #audio-progress {
