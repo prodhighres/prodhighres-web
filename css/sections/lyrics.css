@@ -1,10 +1,13 @@
 .lyrics-panel {
-    background-color: var(--color-neutral-1000);
-    border: 1px solid var(--color-frost-light);
-    border-radius: var(--radius-2xl);
+    background-color: transparent;
+    /*border: 1px solid transparent;*/
     width: min(100%, 48rem);
     transition: var(--motion-focus);
 }
+
+/*.lyrics-panel:hover {
+    border: 1px solid var(--color-frost-light);
+}*/
 
 .lyrics-panel textarea::placeholder {
     color: var(--color-neutral-600);
@@ -31,11 +34,11 @@
 
 .typing-cursor {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
-    transform: translateY(-58%);
     width: 1px;
-    height: 70%;
+    height: 50%;
+    transform: translateX(-3px);
     background: var(--color-neutral-0);
     animation: blink 1s step-end infinite;
     pointer-events: none;

@@ -59,6 +59,30 @@ lyricsTitle.addEventListener("input", () => {
     );
 });
 
+lyricsTitle.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        lyricsText.focus();
+    }
+});
+
+lyricsText.addEventListener("keydown", (event) => {
+    if (
+        event.key === "Backspace" &&
+        lyricsText.selectionStart === 0 &&
+        lyricsText.selectionEnd === 0
+    ) {
+        event.preventDefault();
+        lyricsTitle.focus();
+
+        // Place cursor at the end of the title
+        lyricsTitle.setSelectionRange(
+            lyricsTitle.value.length,
+            lyricsTitle.value.length
+        );
+    }
+});
+
 // Hide cursor when text is selected
 lyricsTitle.addEventListener("select", () => {
     document.querySelector(".typing-cursor").classList.add("hidden");

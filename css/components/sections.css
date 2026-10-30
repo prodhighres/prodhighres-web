@@ -1,7 +1,6 @@
 /* Base section */
 section {
   display: flex;
-  padding-block: var(--space-10);
 }
 
 .section-container {

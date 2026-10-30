@@ -1,6 +1,6 @@
 
 .showcase {
-    --card-width: min(500px, 100vw);
+    --card-width: min(500px, calc(100vw));
 
     display: flex;
     gap: var(--space-7);
