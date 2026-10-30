@@ -31,6 +31,7 @@
     line-height: var(--lh-normal);
     font-weight: var(--fw-semibold);
     text-transform: capitalize;
+    height: 100%;
 } 
 
 .lyrics-text {
