@@ -58,7 +58,7 @@
                 <img class="about-image" src="assets/images/about/texture1.gif">
             </div>
         </section>
-        <section class="showcase middle center" id="showcase">
+        <section class="showcase left center" id="showcase">
 
             <template id="beatcard-template">
                     <div><div class="beatcard paused">
@@ -66,11 +66,41 @@
                         <div class="frost"></div>
                         <div class="info">
                             <i class="ph-fill ph-play play"></i>
-                            <i class="ph-fill ph-pause pause"></i>
+                            <i class="ph-bold ph-speaker-hifi pause"></i>
                             <h3 class="title"></h3>
                         </div>
                     </div></div>
             </template>
+
+
+            <div id="audioplayer-container" class="middle center container column">
+                <div id="audioplayer" class="grid grid-x-3 center padding-x-lg">
+                    <p id="audio-time-current" class="container left center">00:00</p>
+
+                    <div id="audio-controls" class="container gap-md middle center">
+                        <button id="audio-skip-back" type="button" class="container fit-content-x center middle">
+                            <i class="ph-fill ph-skip-back"></i>
+                        </button>
+
+                        <button id="playtoggle" type="button" class="container center fit-content-x middle">
+                            <i class="ph-fill ph-play" id="audio-play-icon"></i>
+                            <i class="ph-fill ph-pause" id="audio-pause-icon" style="display: none;"></i>
+                        </button>
+
+                        <button id="audio-skip-forward" type="button" class="container fit-content-x center middle">
+                            <i class="ph-fill ph-skip-forward"></i>
+                        </button>
+                    </div>
+
+                    <p id="audio-time-full" class="container right center">00:00</p>
+                </div>
+
+                <div id="audio-progress-container" class="container middle center padding-x-lg padding-y-lg">
+                    <div id="audio-progress-bar" class="container left">
+                        <div id="audio-progress"></div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="lyrics middle center padding-x-lg" id="lyrics">
             <div class="lyrics-panel container">
