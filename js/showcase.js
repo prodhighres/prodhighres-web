@@ -154,6 +154,27 @@ function updateFocusedCard() {
 
 showcase.addEventListener("scroll", updateFocusedCard);
 
+let carouselHintShown = false;
+
+function showCarouselHint() {
+    if (carouselHintShown || window.innerWidth >= 1200) return;
+
+    carouselHintShown = true;
+
+    const cards = showcase.querySelectorAll(".beatcard");
+
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add("hint");
+
+            card.addEventListener("animationend", () => {
+                card.classList.remove("hint");
+            }, { once: true });
+
+        }, index * 80);
+    });
+}
+
 function setPlayerVisibility(visible) {
     audioplayerContainer.classList.toggle("visible", visible);
 }
@@ -406,6 +427,7 @@ showcaseCards.forEach((card, index) => {
             }
 
             playTrack(tracks.indexOf(track), true);
+            showCarouselHint();
         });
     }
 
