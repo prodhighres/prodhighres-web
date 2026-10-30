@@ -1,22 +1,13 @@
 
 .showcase {
-    --card-width: min(500px, calc(100vw - var(--space-7) - var(--space-7)));
+    --card-width: min(500px, 100vw);
 
     display: flex;
     gap: var(--space-7);
     width: 100%;
     overflow-x: auto;
 
-    padding-inline: max(
-        var(--space-7),
-        calc((100% - var(--card-width)) / 2)
-    );
-
     scroll-snap-type: x mandatory;
-    scroll-padding-inline: max(
-        var(--space-7),
-        calc((100% - var(--card-width)) / 2)
-    );
 
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
@@ -129,6 +120,16 @@
 @media (min-width: 1200px) {
     .showcase {
         --card-width: min(1000px, calc(100vw - var(--space-8) - var(--space-8)));
+        
+        padding-inline: max(
+            var(--space-7),
+            calc((100% - var(--card-width)) / 2)
+        );
+
+        scroll-padding-inline: max(
+            var(--space-7),
+            calc((100% - var(--card-width)) / 2)
+        );
     }
 
     .beatcard {
