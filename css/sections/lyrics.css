@@ -7,7 +7,7 @@
 }
 
 .lyrics-panel textarea::placeholder {
-    color: var(--color-frost-light);
+    color: var(--color-neutral-600);
 }
 
 .lyrics-panel textarea:focus {
@@ -60,7 +60,7 @@
 } 
 
 .lyrics-text {
-    font-weight: var(--fw-semibold);
+    font-weight: var(--fw-regular);
     font-size: var(--fs-md);
     line-height: var(--lh-relaxed);
     color: var(--color-neutral-200);
