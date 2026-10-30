@@ -33,6 +33,7 @@ section.lyrics {
     font-size: var(--fs-2xl);
     line-height: var(--lh-normal);
     font-weight: var(--fw-semibold);
+    text-transform: capitalize;
 } 
 
 .lyrics-text {
