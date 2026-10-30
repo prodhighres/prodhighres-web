@@ -6,6 +6,7 @@
 
 .footer {
     width: min(100%, 48rem);
+    padding-bottom: var(--space-9);
 }
 
 .footer-title {
