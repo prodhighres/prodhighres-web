@@ -9,28 +9,29 @@ function autoResize(textarea) {
     textarea.style.height = `${textarea.scrollHeight}px`;
 }
 
-// Update delete button visibility
-function updateDeleteButton() {
+// Update button visibility
+function updateButtonVisibility() {
     const hasContent =
         lyricsTitle.value.trim() !== "" ||
         lyricsText.value.trim() !== "";
 
     deleteButton.classList.toggle("visible", hasContent);
+    lyricsButton.classList.toggle("visible", hasContent);
 }
 
 // Restore saved lyrics
 lyricsTitle.value = localStorage.getItem("lyricsTitle") || "";
 lyricsText.value = localStorage.getItem("lyricsText") || "";
 
-// Initial delete button visibility
-updateDeleteButton();
+// Initial button visibility
+updateButtonVisibility();
 
 // Title input
 lyricsTitle.addEventListener("input", () => {
     autoResize(lyricsTitle);
     lyricsTitle.setCustomValidity("");
     localStorage.setItem("lyricsTitle", lyricsTitle.value);
-    updateDeleteButton();
+    updateButtonVisibility();
 });
 
 // Text input
@@ -38,7 +39,7 @@ lyricsText.addEventListener("input", () => {
     autoResize(lyricsText);
     lyricsText.setCustomValidity("");
     localStorage.setItem("lyricsText", lyricsText.value);
-    updateDeleteButton();
+    updateButtonVisibility();
 });
 
 // Initial resize
@@ -68,14 +69,6 @@ deleteButton.addEventListener("click", () => {
     autoResize(lyricsTitle);
     autoResize(lyricsText);
 
-    // Hide delete button
-    setTimeout(() => {
-        deleteText.textContent = "Delete";
-        deleteButton.classList.remove("deleted");
-
-        updateDeleteButton();
-    }, 2000);
-
     // Show deletion confirmation
     const deleteText = deleteButton.querySelector("h5");
     deleteText.textContent = "Deleted";
@@ -85,7 +78,10 @@ deleteButton.addEventListener("click", () => {
     setTimeout(() => {
         deleteText.textContent = "Delete";
         deleteButton.classList.remove("deleted");
-    }, 1000);
+
+        // Hide buttons after animation
+        updateButtonVisibility();
+    }, 2000);
 });
 
 // Copy button

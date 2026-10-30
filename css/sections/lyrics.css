@@ -72,6 +72,10 @@
     opacity: 1;
 }
 
+.lyrics-copy-button {
+    opacity: 0;
+}
+
 .lyrics-delete-button {
     border: 1px solid transparent !important;
     opacity: 0;
@@ -79,7 +83,8 @@
     cursor: default;
 } 
 
-.lyrics-delete-button.visible {
+.lyrics-delete-button.visible,
+.lyrics-copy-button.visible {
     opacity: 1;
     pointer-events: all;
     cursor: pointer;
