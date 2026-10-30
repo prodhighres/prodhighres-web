@@ -1,7 +1,7 @@
 .lyrics-panel {
     background-color: var(--color-neutral-1000);
     border: 1px solid var(--color-frost-light);
-    border-radius: var(--radius-2xl);
+    border-radius: var(--radius-xl);
     width: min(100%, 48rem);
     transition: var(--motion-focus);
 }

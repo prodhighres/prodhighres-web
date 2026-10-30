@@ -6,11 +6,10 @@ section.about {
     display: flex;
     width: min(100%, 48rem);
     background-color: var(--color-frost-light);
-    border-radius: var(--radius-2xl);
+    border-radius: var(--radius-xl);
     border: 1px solid var(--color-frost-light);
     position: relative;
     overflow: hidden;
-    box-shadow: var(shadow-xl);
     scale: 1;
     transition: scale var(--duration-medium) var(--ease-standard);
 }
