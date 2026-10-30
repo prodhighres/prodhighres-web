@@ -82,9 +82,14 @@
     height: 48px;
 }
 
-.lyrics-panel button.copied, .lyrics-panel button.deleted {
+.lyrics-panel button.copied {
     scale: 1.1;
     width: 95px;
+}
+
+.lyrics-panel button.deleted {
+    scale: 1.1;
+    width: 104px;
 }
 
 .lyrics-actions-text {
