@@ -45,7 +45,7 @@
     color: var(--color-neutral-0);
     justify-content: end;
     padding: var(--space-2) var(--space-4);
-    background-color: var(--color-frost-light);
+    
     width: fit-content;
     border-radius: var(--radius-md);
     border: 1px solid var(--color-frost-light);
@@ -77,7 +77,6 @@
 }
 
 .lyrics-delete-button {
-    border: 1px solid transparent !important;
     opacity: 0;
     pointer-events: none;
     cursor: default;
