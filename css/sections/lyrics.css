@@ -20,7 +20,6 @@
     width: 100%;
     height: auto;
     padding: 0;
-    color: var(--color-neutral-400);
     outline: none;
     overflow: hidden;
     resize: none;
@@ -57,12 +56,14 @@
     line-height: var(--lh-normal);
     font-weight: var(--fw-semibold);
     text-transform: capitalize;
+    color: var(--color-neutral-600);
 } 
 
 .lyrics-text {
     font-weight: var(--fw-semibold);
     font-size: var(--fs-md);
     line-height: var(--lh-relaxed);
+    color: var(--color-neutral-200);
 }
 
 .lyrics-panel button {

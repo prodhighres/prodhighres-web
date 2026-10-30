@@ -26,6 +26,16 @@ lyricsText.value = localStorage.getItem("lyricsText") || "";
 // Initial button visibility
 updateButtonVisibility();
 
+// Restore saved lyrics
+lyricsTitle.value = localStorage.getItem("lyricsTitle") || "";
+lyricsText.value = localStorage.getItem("lyricsText") || "";
+
+// Initial button visibility
+updateButtonVisibility();
+
+// Initial cursor visibility
+updateTypingCursor();
+
 // Title input
 lyricsTitle.addEventListener("input", () => {
     autoResize(lyricsTitle);
@@ -160,4 +170,16 @@ lyricsButton.addEventListener("click", async (event) => {
     } catch (error) {
         console.error("Clipboard error:", error);
     }
+});
+
+// Warn before leaving the page if lyrics exist
+window.addEventListener("beforeunload", (event) => {
+    const hasContent =
+        lyricsTitle.value.trim() !== "" ||
+        lyricsText.value.trim() !== "";
+
+    if (!hasContent) return;
+
+    event.preventDefault();
+    event.returnValue = "";
 });
