@@ -43,16 +43,33 @@ section.lyrics {
 }
 
 .lyrics-panel button {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
     color: var(--color-neutral-0);
+    justify-content: end;
     padding: var(--space-2) var(--space-4);
     background-color: var(--color-frost-light);
     width: fit-content;
     border-radius: var(--radius-md);
     border: 1px solid var(--color-frost-light);
     scale: 1;
-    transition: var(--motion-focus);
+    transition: all var(--duration-medium) var(--ease-standard);
+    width: 50px;
+    height: 50px;
 }
 
 .lyrics-panel button:hover {
     scale: 1.1;
+    width: 85px;
+}
+
+.lyrics-actions-text {
+    transform: translateX(150%);
+    opacity: 0;
+    transition: all var(--duration-medium) var(--ease-standard);
+}
+
+.lyrics-panel button:hover .lyrics-actions-text {
+    transform: translateX(0%);
+    opacity: 1;
 }
