@@ -20,8 +20,10 @@ lyricsText.addEventListener("input", () => {
 });
 
 // Initial resize
-autoResize(lyricsTitle);
-autoResize(lyricsText);
+window.addEventListener("load", () => {
+    autoResize(lyricsTitle);
+    autoResize(lyricsText);
+});
 
 // Copy button
 lyricsButton.addEventListener("click", async (event) => {
