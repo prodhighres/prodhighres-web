@@ -55,16 +55,6 @@
     transition: var(--motion-drawer);
 }
 
-@media (max-width: 600px) {
-    #audio-progress-container {
-        padding-bottom: 8%;
-    }
-
-    #audioplayer-container::before {
-        scale: 2.5;
-    }
-}
-
 #audio-progress-bar {
     background-color: var(--color-frost-light);
     height: 5px;
