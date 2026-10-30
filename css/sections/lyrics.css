@@ -7,7 +7,7 @@
 }
 
 .lyrics-panel textarea::placeholder {
-    color: var(--color-neutral-0);
+    color: var(--color-neutral-400);
 }
 
 .lyrics-panel textarea:focus {
@@ -24,6 +24,32 @@
     outline: none;
     overflow: hidden;
     resize: none;
+}
+
+.lyrics-title-wrapper {
+    position: relative;
+}
+
+.typing-cursor {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-58%);
+    width: 1px;
+    height: 70%;
+    background: var(--color-neutral-0);
+    animation: blink 1s step-end infinite;
+    pointer-events: none;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.typing-cursor.hidden {
+    display: none;
 }
 
 .lyrics-title {

@@ -32,7 +32,43 @@ lyricsTitle.addEventListener("input", () => {
     lyricsTitle.setCustomValidity("");
     localStorage.setItem("lyricsTitle", lyricsTitle.value);
     updateButtonVisibility();
+
+    document.querySelector(".typing-cursor").classList.toggle(
+        "hidden",
+        lyricsTitle.value.length > 0 || document.activeElement === lyricsTitle
+    );
 });
+
+// Hide cursor when text is selected
+lyricsTitle.addEventListener("select", () => {
+    document.querySelector(".typing-cursor").classList.add("hidden");
+});
+
+// Hide decorative cursor when either textarea is focused
+lyricsTitle.addEventListener("focus", () => {
+    document.querySelector(".typing-cursor").classList.add("hidden");
+});
+
+lyricsText.addEventListener("focus", () => {
+    document.querySelector(".typing-cursor").classList.add("hidden");
+});
+
+// Show cursor again only when both textareas are empty and unfocused
+function updateTypingCursor() {
+    const isFocused =
+        document.activeElement === lyricsTitle ||
+        document.activeElement === lyricsText;
+
+    const hasTitle = lyricsTitle.value.length > 0;
+
+    document.querySelector(".typing-cursor").classList.toggle(
+        "hidden",
+        isFocused || hasTitle
+    );
+}
+
+lyricsTitle.addEventListener("blur", updateTypingCursor);
+lyricsText.addEventListener("blur", updateTypingCursor);
 
 // Text input
 lyricsText.addEventListener("input", () => {
@@ -81,6 +117,8 @@ deleteButton.addEventListener("click", () => {
 
         // Hide buttons after animation
         updateButtonVisibility();
+        // Show Typing cursor after deletion again
+        updateTypingCursor();
     }, 2000);
 });
 
