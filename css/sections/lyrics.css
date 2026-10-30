@@ -55,7 +55,7 @@
     height: 48px;
 }
 
-.lyrics-panel button.copied {
+.lyrics-panel button.copied, .lyrics-panel button.deleted {
     scale: 1.1;
     width: 95px;
 }
@@ -66,7 +66,25 @@
     transition: all var(--duration-medium) var(--ease-standard);
 }
 
-.lyrics-panel button.copied .lyrics-actions-text {
+.lyrics-panel button.copied .lyrics-actions-text,
+.lyrics-panel button.deleted .lyrics-actions-text {
     transform: translateX(0%);
     opacity: 1;
 }
+
+.lyrics-delete-button {
+    border: 1px solid transparent !important;
+    opacity: 0;
+} 
+
+.lyrics-delete-button.visible {
+    opacity: 1;
+}
+
+.lyrics-copy-button:hover {
+    border: 1px solid var(--color-neutral-0)
+}
+
+.lyrics-delete-button:hover {
+    border: 1px solid var(--color-brand-red) !important;
+} 
