@@ -11,7 +11,7 @@ section.hero {
 }
 
 .hero-cover {
-    position: absolute;
+    position: fixed;
     display: flex;
     object-fit: cover;
     width: 100%;
