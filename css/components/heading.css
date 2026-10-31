@@ -1,0 +1,13 @@
+.heading-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    display: flex;
+    width: 100%;
+    color: var(--color-neutral-600);
+    width: min(100%, 48rem) !important;
+}

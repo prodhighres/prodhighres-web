@@ -78,8 +78,8 @@
         </div>
         <nav class="navbar">
             <a href="#hero"><img class="navbar-logo" src="assets/symbols/logo-blur.png" alt="Home"></a>
-            <a href="#about"><button><h5>About</h5></button></a>
-            <a href="#showcase"><button><h5>Beats</h5></button></a>
+            <a href="#heading-about"><button><h5>About</h5></button></a>
+            <a href="#heading-showcase"><button><h5>Beats</h5></button></a>
             <!--<a href="#licences"><button><h5>Licences</h5></button></a>-->
             <a href="#contact"><button><h5>Contact</h5></button></a>
             <a href="https://www.beatstars.com/prodhighres" 
@@ -107,15 +107,19 @@
         </div>
     </section>
     <div class="section-container container column padding-y-2xl gap-2xl">
-        <section class="about middle center padding-x-lg" id="about">
+        <div id="heading-about" class="heading-container padding-x-lg">
+            <div class="heading padding-x-lg">
+                <h2>About</h2>
+            </div>
+        </div>
+        <section class="about middle center column padding-x-lg" id="about">
             <div class="about-panel container left gap-sm">
-                <div class="about-text container column gap-md padding-lg">
+                <div class="about-text container column gap-md padding-x-lg padding-y-lg">
                     <div class="container gap-md">
-                        <img class="icon" src="assets/symbols/icon-dot.svg" alt="–">
-                        <h2>About</h2>
+                        <h2>Highres.</h2>
                     </div>
                     <p class="decorative">
-                        Highres is a Swiss music producer creating unique beats, inspired by emotion, texture and detail.
+                        is a Swiss music producer creating unique beats, inspired by emotion, texture and detail.
                         Each instrumental is a story to be told, while it leaves behind a feeling on it’s own. “Music is a feeling, not sound”                    </p>
                 </div>
                 <img class="about-image"
@@ -124,12 +128,12 @@
                 >
             </div>
         </section>
-        <section class="container column gap-xl">
-
-            <div class="showcase-heading container column gap-sm left center hide">
-                <h2>Instrumentals</h2>
+        <div id="heading-showcase" class="heading-container padding-x-lg">
+            <div class="heading padding-x-lg">
+                <h2>Selection</h2>
             </div>
-
+        </div>
+        <section class="container column gap-xl">
             <div class="showcase left center" id="showcase">
                 <template id="beatcard-template">
                         <div><div class="beatcard paused">
@@ -174,9 +178,9 @@
                 </div>
             </div>
         </section>
-        <section class="lyrics middle center" id="lyrics">
-            <div class="lyrics-panel container">
-                <div class="lyrics-content container column padding-lg gap-md">
+        <section class="lyrics middle center column padding-x-lg gap-xl" id="lyrics">
+            <div class="lyrics-panel container padding-x-lg padding-y-lg">
+                <div class="lyrics-content container column gap-md">
                     <form spellcheck="false" autocorrect="off">
                         <div class="lyrics-title-wrapper">
                             <span class="typing-cursor"></span>
@@ -216,8 +220,8 @@
                 </div>
             </div>
         </section>
-        <section class="contact middle center padding-x-lg" id="contact">
-            <form class="contact-form padding-lg" id="contact-form" method="post">
+        <section class="contact middle center padding-x-lg column gap-xl" id="contact">
+            <form class="contact-form padding-x-lg padding-y-lg" id="contact-form" method="post">
                 <div class="contact-form-title container spread gap-lg">
                     <div class="container center gap-md">
                         <a href="https://www.instagram.com/prodhighres/" target="_blank" rel="noopener noreferrer">
