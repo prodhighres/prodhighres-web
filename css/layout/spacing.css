@@ -39,7 +39,7 @@
 }
 
 .padding-y-lg {
-  padding-block: var(--space-6);
+  padding-block: var(--space-7);
 }
 
 .padding-y-xl {
@@ -59,7 +59,7 @@
 }
 
 .padding-x-lg {
-  padding-inline: var(--space-6);
+  padding-inline: var(--space-7);
 }
 
 .padding-x-xl {
