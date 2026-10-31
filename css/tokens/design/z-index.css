@@ -4,7 +4,8 @@
 
 :root {
     /* Semantic */
-    --z-background: -1;
+    --z-background-2: -2;
+    --z-background-1: -1;
     --z-overlay-1: 1;
     --z-overlay-2: 2;
     --z-nav: 50;
