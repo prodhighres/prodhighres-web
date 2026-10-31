@@ -120,6 +120,16 @@
     opacity: 1;
 }
 
+.lyrics-actions {
+    height: 0;
+    transition: all var(--duration-slow) var(--ease-standard);
+    overflow: visible;
+}
+
+.lyrics-actions.visible {
+    height: 100px;
+}
+
 .lyrics-copy-button {
     opacity: 0;
 }

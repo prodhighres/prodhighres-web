@@ -1,4 +1,5 @@
 
+const lyricsActions = document.querySelector(".lyrics-actions");
 const lyricsTitle = document.querySelector(".lyrics-title");
 const lyricsText = document.querySelector(".lyrics-text");
 const lyricsButton = document.querySelector(".lyrics-copy-button");
@@ -19,6 +20,7 @@ function updateButtonVisibility() {
 
     deleteButton.classList.toggle("visible", hasContent);
     lyricsButton.classList.toggle("visible", hasContent);
+    lyricsActions.classList.toggle("visible", hasContent);
 }
 
 function updateRemark() {
