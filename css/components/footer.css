@@ -1,12 +1,15 @@
 .footer-container {
     background: linear-gradient(to top, var(--color-neutral-1000) 50%, transparent 100%);
-    color: var(--color-neutral-0);
     z-index: var(--z-overlay-2);
     position: relative;
 }
 
 .footer {
     width: min(100%, 48rem);
+}
+
+.footer button {
+    color: var(--color-neutral-0);
 }
 
 .footer-title {

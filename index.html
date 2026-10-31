@@ -97,10 +97,7 @@
             alt="Abstract visual artwork representing the sound of Highres"
         >
         <!--<video class="hero-cover" src="assets/video/hero.mp4" alt="Hero Video" autoplay="true" loop="true"></video>-->
-        <img class="hero-logo focus" 
-            src="assets/symbols/icon-logo-white.svg"
-            alt="Home" id="Highres Logo"
-        >
+        <img id="hero-logo" class="hero-logo focus" src="assets/symbols/icon-logo-white.svg" alt="Home">
         <audio id="logo-sound" src="assets/audio/vocalsignature.wav" preload="auto"></audio>
         <div class="container middle gap-md">
             <a href="https://open.spotify.com/artist/6RTWR0vIiHFyxwuvov4zXa" target="_blank" rel="noopener noreferrer">
@@ -243,14 +240,54 @@
     </div>
     <section class="footer-container container center middle padding-y-2xl padding-x-lg">
         <div class="footer grid grid-x-2 center gap-lg left">
-            <div><h1 class="footer-title">2026</h1></div>
+            <div>
+                <h1 class="footer-title">2026</h1>
+            </div>
+
             <div class="container center fit-content-x column">
                 <div class="container left column gap-sm padding-y-sm">
-                    <a href="#"><h5>Legal Notice</h5></a>
-                    <a href="#"><h5>Privacy Policy</h5></a>
+                    <button class="container fit-content-x" type="button" data-modal="legal-notice">
+                        <h5>Legal Notice</h5>
+                    </button>
+
+                    <button class="container fit-content-x" type="button" data-modal="privacy-policy">
+                        <h5>Privacy Policy</h5>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Legal Notice Modal -->
+    <div class="modal container center middle padding-x-lg padding-y-lg" id="legal-notice">
+        <div class="modal-content container column gap-lg">
+
+            <button class="modal-close" aria-label="Close modal">
+                <i class="ph-bold ph-x"></i>
+            </button>
+
+            <h2>Legal Notice</h2>
+
+            <div class="modal-text container column gap-lg" id="legal-notice-content">
+                <!-- Legal Notice HTML -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div class="modal container center middle padding-x-lg padding-y-lg" id="privacy-policy">
+        <div class="modal-content container column gap-lg">
+
+            <button class="modal-close" aria-label="Close modal">
+                <i class="ph-bold ph-x"></i>
+            </button>
+
+            <h2>Privacy Policy</h2>
+
+            <div class="modal-text container column gap-lg" id="privay-policy-content">
+                <!-- Privacy Policy HTML -->
+            </div>
+        </div>
+    </div>
 </body>
 </html>
