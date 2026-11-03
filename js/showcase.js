@@ -182,12 +182,12 @@ showcase.addEventListener("scroll", () => {
 
 showcase.addEventListener("scroll", updateFocusedCard);
 
-let carouselHintShown = false;
+let showcaseHintShown = false;
 
-function showCarouselHint() {
-    if (carouselHintShown || window.innerWidth >= 600) return;
+function showshowcaseHint() {
+    if (showcaseHintShown || window.innerWidth >= 600) return;
 
-    carouselHintShown = true;
+    showcaseHintShown = true;
 
     const firstCard = showcase.querySelector(".beatcard");
 
@@ -398,7 +398,7 @@ skipForward.addEventListener("click", nextTrack);
 progressBar.addEventListener("click", seekAudio);
 
 
-// Showcase-Karten erstellen
+// showcase-Karten erstellen
 showcaseCards.forEach((card, index) => {
     const clone = template.content.cloneNode(true);
 
@@ -452,7 +452,7 @@ showcaseCards.forEach((card, index) => {
             }
 
             playTrack(tracks.indexOf(track), true);
-            showCarouselHint();
+            showshowcaseHint();
         });
     }
 

@@ -40,7 +40,6 @@
 
 #audioplayer {
     height: auto;
-    width: min(100%, 48rem);
     z-index: var(--z-overlay-1);
 }
 
@@ -50,7 +49,6 @@
 
 #audio-progress-container {
     z-index: var(--z-overlay-1);
-    width: min(100%, 48rem);
     padding-top: var(--space-3);
     transition: var(--motion-drawer);
 }

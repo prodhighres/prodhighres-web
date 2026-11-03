@@ -65,7 +65,12 @@
     <h1 class="hide">
         Highres – Swiss Beat Producer
     </h1>
-    <div class="top-blur"></div>
+
+
+    <!------------------------------------------------------------------- HERO -->
+
+
+    <div class="start-y-blur"></div>
     <div class="navbar-container">
         <div class="navbar-mobile">
             <a href="#hero">
@@ -91,7 +96,7 @@
             </a>
         </nav>
     </div>
-    <section class="hero center" id="hero">
+    <section class="hero center-y" id="hero">
         <img class="hero-cover" 
             src="assets/images/hero/hero1.jpg"
             alt="Abstract visual artwork representing the sound of Highres"
@@ -99,23 +104,28 @@
         <!--<video class="hero-cover" src="assets/video/hero.mp4" alt="Hero Video" autoplay="true" loop="true"></video>-->
         <img id="hero-logo" class="hero-logo focus" src="assets/symbols/icon-logo-white.svg" alt="Home">
         <audio id="logo-sound" src="assets/audio/vocalsignature.wav" preload="auto"></audio>
-        <div class="container middle gap-md">
+        <div class="flex center-x gap-md">
             <a href="https://open.spotify.com/artist/6RTWR0vIiHFyxwuvov4zXa" target="_blank" rel="noopener noreferrer">
                 <button class="shine" id="spotify"><h5>Spotify</h5></button></a>
             <a href="https://www.beatstars.com/prodhighres" target="_blank" rel="noopener noreferrer">
                 <button class="shine" id="beatstars"><h5>Beatstars</h5></button></a>
         </div>
     </section>
-    <div class="section-container container column padding-y-2xl gap-2xl">
+    <div class="section-container flex column padding-y-2xl gap-2xl">
+
+
+        <!------------------------------------------------------------------- ABOUT -->
+
+
         <div id="heading-about" class="heading-container padding-x-lg">
             <div class="heading padding-x-lg">
                 <h2>About</h2>
             </div>
         </div>
-        <section class="about middle center column padding-x-lg" id="about">
-            <div class="about-panel container left gap-sm">
-                <div class="about-text container column gap-md padding-x-lg padding-y-lg">
-                    <div class="container gap-md">
+        <section class="about center-x center-y column padding-x-lg" id="about">
+            <div class="about-panel boundary flex start-x gap-sm">
+                <div class="about-text flex column gap-md padding-x-lg padding-y-lg">
+                    <div class="flex gap-md">
                         <h2>Highres.</h2>
                     </div>
                     <p class="decorative">
@@ -128,13 +138,18 @@
                 >
             </div>
         </section>
+
+
+        <!------------------------------------------------------------------- showcase -->
+
+
         <div id="heading-showcase" class="heading-container padding-x-lg">
             <div class="heading padding-x-lg">
                 <h2>Selection</h2>
             </div>
         </div>
-        <section class="container column gap-xl">
-            <div class="showcase left center" id="showcase">
+        <section class="flex column gap-xl">
+            <div class="showcase start-x center-y" id="showcase">
                 <template id="beatcard-template">
                         <div><div class="beatcard paused">
                             <img src="" alt="">
@@ -148,39 +163,44 @@
                 </template>
 
 
-                <div id="audioplayer-container" class="middle center container column">
-                    <div id="audioplayer" class="grid grid-x-3 center padding-x-lg">
-                        <p id="audio-time-current" class="container left center">00:00</p>
+                <div id="audioplayer-container" class="center-x center-y flex column">
+                    <div id="audioplayer" class="boundary grid grid-x-3 center-y padding-x-lg">
+                        <p id="audio-time-current" class="flex start-x center-y">00:00</p>
 
-                        <div id="audio-controls" class="container gap-md middle center">
-                            <button id="audio-skip-back" type="button" class="container fit-content-x center middle">
+                        <div id="audio-controls" class="flex gap-md center-x center-y">
+                            <button id="audio-skip-back" type="button" class="flex fit-content-x center-y center-x">
                                 <i class="ph-fill ph-skip-back"></i>
                             </button>
 
-                            <button id="playtoggle" type="button" class="container center fit-content-x middle">
+                            <button id="playtoggle" type="button" class="flex center-y fit-content-x center-x">
                                 <i class="ph-fill ph-play" id="audio-play-icon"></i>
                                 <i class="ph-fill ph-pause" id="audio-pause-icon" style="display: none;"></i>
                             </button>
 
-                            <button id="audio-skip-forward" type="button" class="container fit-content-x center middle">
+                            <button id="audio-skip-forward" type="button" class="flex fit-content-x center-y center-x">
                                 <i class="ph-fill ph-skip-forward"></i>
                             </button>
                         </div>
 
-                        <p id="audio-time-full" class="container right center">00:00</p>
+                        <p id="audio-time-full" class="flex end-x center-y">00:00</p>
                     </div>
 
-                    <div id="audio-progress-container" class="container middle center padding-x-lg padding-y-xl">
-                        <div id="audio-progress-bar" class="container left">
+                    <div id="audio-progress-container" class="boundaryflex center-x center-y padding-x-lg padding-y-xl">
+                        <div id="audio-progress-bar" class="flex start-x">
                             <div id="audio-progress"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="lyrics middle center column padding-x-lg gap-xl" id="lyrics">
-            <div class="lyrics-panel container">
-                <div class="lyrics-content container column">
+
+        
+        <!------------------------------------------------------------------- LYRICS -->
+
+
+        <section class="lyrics center-x center-y column padding-x-lg gap-xl" id="lyrics">
+            <div class="lyrics-panel boundary flex">
+                <div class="lyrics-content flex column">
                     <form spellcheck="false" autocorrect="off">
                         <div class="lyrics-title-wrapper">
                             <span class="typing-cursor"></span>
@@ -207,12 +227,12 @@
                     <p class="lyrics-remark condensed">
                         – Your lyrics haven't been copied yet, they are temporarily saved in this browser.
                     </p>
-                    <div class="lyrics-actions container right center gap-md">
-                        <button class="lyrics-delete-button container center gap-sm" type="submit">
+                    <div class="lyrics-actions flex end-x center-y gap-md">
+                        <button class="lyrics-delete-button flex center-y gap-sm" type="submit">
                             <h5 class="lyrics-actions-text">Deleted</h5>
                             <i class="ph-fill ph-trash"></i>
                         </button>
-                        <button class="lyrics-copy-button shine container center gap-sm" type="submit">
+                        <button class="lyrics-copy-button shine flex center-y gap-sm" type="submit">
                             <h5 class="lyrics-actions-text">Copied</h5>
                             <i class="ph-fill ph-clipboard-text"></i>
                         </button>
@@ -220,17 +240,40 @@
                 </div>
             </div>
         </section>
-        <section class="contact middle center padding-x-lg column gap-xl" id="contact">
-            <form class="contact-form padding-x-lg padding-y-lg" id="contact-form" method="post">
-                <div class="contact-form-title container spread gap-lg">
-                    <div class="container center gap-md">
+
+        <!------------------------------------------------------------------- LICENSE -->
+
+        <div id="heading-licenses" class="heading-container padding-x-lg">
+            <div class="heading padding-x-lg">
+                <h2>Licenses</h2>
+            </div>
+        </div>
+        <section class="licenses center-x center-y padding-x-lg column gap-xl" id="licenses">
+            <div class="licensecard padding-x-lg padding-y-lg boundary flex column gap-md">
+                <div class="flex center-y gap-md">
+                    <i class="ph-bold ph-signature"></i>
+                    <h3>Pro</h3>
+                </div>
+                <p>This license includes the rights to use the content for commercial purposes. It is non exclusive</p>
+            </div>
+
+        </section>
+
+
+        <!------------------------------------------------------------------- CONTACT -->
+
+
+        <section class="contact center-x center-y padding-x-lg column gap-xl" id="contact">
+            <form class="contact-form boundary padding-x-lg padding-y-lg" id="contact-form" method="post">
+                <div class="contact-form-title flex spread-x gap-lg">
+                    <div class="flex center-y gap-md">
                         <a href="https://www.instagram.com/prodhighres/" target="_blank" rel="noopener noreferrer">
-                            <i class="ph-fill ph-instagram-logo container" style="font-size: 28px;"></i>
+                            <i class="ph-fill ph-instagram-logo flex" style="font-size: 28px;"></i>
                         </a>
                         <a href="https://www.tiktok.com/@prodhighres" target="_blank" rel="noopener noreferrer">
-                            <i class="ph-fill ph-tiktok-logo container" style="font-size: 28px;"></i>
+                            <i class="ph-fill ph-tiktok-logo flex" style="font-size: 28px;"></i>
                         </a>
-                        <h3 class="decorative container" style="font-weight: var(--fw-regular);">Get in touch</h3>
+                        <h3 class="decorative flex" style="font-weight: var(--fw-regular);">Get in touch</h3>
                     </div>
                 </div>
                 <input class="mail" id="contact-email" name="email" type="email" autocomplete="email" placeholder="Email" maxlength="50" required>
@@ -241,19 +284,24 @@
                 </button>
             </form>
         </section>
-        <section class="footer-container container center middle padding-y-2xl padding-x-lg">
-            <div class="footer grid grid-x-2 center gap-lg left">
+
+
+        <!------------------------------------------------------------------- FOOTER -->
+
+
+        <section class="footer-container flex center-y center-x padding-y-2xl padding-x-lg">
+            <div class="footer boundary grid grid-x-2 center-y gap-lg start-x">
                 <div>
                     <h1 class="footer-title">2026</h1>
                 </div>
 
-                <div class="container center fit-content-x column">
-                    <div class="container left column gap-sm padding-y-sm">
-                        <button class="container fit-content-x" type="button" data-modal="legal-notice">
+                <div class="flex center-y fit-content-x column">
+                    <div class="flex start-x column gap-sm padding-y-sm">
+                        <button class="flex fit-content-x" type="button" data-modal="legal-notice">
                             <h5>Legal Notice</h5>
                         </button>
 
-                        <button class="container fit-content-x" type="button" data-modal="privacy-policy">
+                        <button class="flex fit-content-x" type="button" data-modal="privacy-policy">
                             <h5>Privacy Policy</h5>
                         </button>
                     </div>
@@ -262,9 +310,12 @@
         </section>
     </div>
 
+
+    <!------------------------------------------------------------------- FOOTER MODALS -->
+
     <!-- Legal Notice Modal -->
-    <div class="modal container center middle padding-x-lg padding-y-lg" id="legal-notice">
-        <div class="modal-content container column gap-lg">
+    <div class="modal flex center-y center-x padding-x-lg padding-y-lg" id="legal-notice">
+        <div class="modal-content boundary flex column gap-lg">
 
             <button class="modal-close" aria-label="Close modal">
                 <i class="ph-bold ph-x"></i>
@@ -272,15 +323,15 @@
 
             <h2>Legal Notice</h2>
 
-            <div class="modal-text container column gap-lg" id="legal-notice-content">
+            <div class="modal-text flex column gap-lg" id="legal-notice-content">
                 <!-- Legal Notice HTML -->
             </div>
         </div>
     </div>
 
     <!-- Privacy Policy Modal -->
-    <div class="modal container center middle padding-x-lg padding-y-lg" id="privacy-policy">
-        <div class="modal-content container column gap-lg">
+    <div class="modal flex center-y center-x padding-x-lg padding-y-lg" id="privacy-policy">
+        <div class="modal-content boundary flex column gap-lg">
 
             <button class="modal-close" aria-label="Close modal">
                 <i class="ph-bold ph-x"></i>
@@ -288,7 +339,7 @@
 
             <h2>Privacy Policy</h2>
 
-            <div class="modal-text container column gap-lg" id="privay-policy-content">
+            <div class="modal-text flex column gap-lg" id="privay-policy-content">
                 <!-- Privacy Policy HTML -->
             </div>
         </div>

@@ -1,0 +1,109 @@
+.beatcard {
+    flex: 0 0 var(--card-width);
+    width: var(--card-width);
+    max-width: none;
+    box-sizing: border-box;
+
+    display: flex;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+
+    margin: 0;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+
+    cursor: pointer;
+    scale: 0.95;
+
+    filter: blur(5px);
+
+    transition: all var(--duration-slow) var(--ease-standard);
+}
+
+.beatcard.card-focus {
+    filter: blur(0px);
+    scale: 1;
+}
+
+.beatcard img {
+    aspect-ratio: 1;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.beatcard .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: var(--space-5);
+    box-sizing: border-box;
+    color: var(--color-neutral-0);
+    z-index: 1;
+    isolation: isolate;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: var(--space-5);
+}
+
+.beatcard .info i {
+    font-size: 24px;
+}
+
+.beatcard .pause {
+    display: none;
+}
+
+/* Paused */
+.beatcard.playing .pause {
+    display: flex;
+}
+
+/* Playing */
+.beatcard.playing .play {
+    display: none;
+}
+
+.beatcard .frost {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.beatcard .frost::before {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    bottom: -15%;
+    rotate: 15deg;
+    transform: scaleX(2);
+    height: 70%;
+    content: '';
+    z-index: var(--z-overlay-1);
+    backdrop-filter: blur(20px);
+    background-color: var(--color-frost-dark);
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 15%, rgba(52,52,52,1) 35%, rgba(229,229,229,0) 100%);
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 15%, rgba(52,52,52,1) 35%, rgba(229,229,229,0) 100%);
+}
+
+@media (min-width: 1200px) {
+    .beatcard {
+        height: 500px;
+        
+    }
+
+    .beatcard img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .beatcard .frost::before {
+        bottom: -35%;
+    }
+}

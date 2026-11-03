@@ -1,0 +1,7 @@
+.licensecard {
+    background-color: var(--color-neutral-900);
+    height: 600px;
+    border-radius: var(--radius-xl);
+    color: var(--color-neutral-0);
+    border: 1px solid var(--color-frost-light);
+}

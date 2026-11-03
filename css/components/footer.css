@@ -5,7 +5,6 @@
 }
 
 .footer {
-    width: min(100%, 48rem);
     z-index: var(--z-overlay-2);
 }
 

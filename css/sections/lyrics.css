@@ -1,7 +1,6 @@
 .lyrics-panel {
     background-color: transparent;
     /*border: 1px solid transparent;*/
-    width: min(100%, 48rem);
     transition: var(--motion-focus);
 }
 
@@ -60,6 +59,7 @@
     line-height: var(--lh-tight);
     text-transform: capitalize;
     color: var(--color-neutral-600);
+    height: 100%;
 } 
 
 .lyrics-text {

@@ -9,5 +9,5 @@
     display: flex;
     width: 100%;
     color: var(--color-neutral-600);
-    width: min(100%, 48rem) !important;
+    width: var(--layout-boundary);
 }

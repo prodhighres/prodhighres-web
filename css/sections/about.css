@@ -1,10 +1,9 @@
-section.about {
+section#about {
     color: var(--color-neutral-0);
 }
 
 .about-panel {
     display: flex;
-    width: min(100%, 48rem);
     background-color: transparent;
     border-radius: var(--radius-2xl);
     border: 1px solid var(--color-frost-light);

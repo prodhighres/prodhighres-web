@@ -1,0 +1,3 @@
+.boundary {
+  width: var(--layout-boundary) !important;
+}
